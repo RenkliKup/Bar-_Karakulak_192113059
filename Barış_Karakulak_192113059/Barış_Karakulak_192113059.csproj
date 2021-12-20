@@ -89,16 +89,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database2DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="OgrenciIslemleri\OgrenciIslemleri.cs">
+    <Compile Include="OgrenciIslemleri\Anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OgrenciIslemleri\OgrenciIslemleri.Designer.cs">
-      <DependentUpon>OgrenciIslemleri.cs</DependentUpon>
+    <Compile Include="OgrenciIslemleri\Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrEkle.Designer.cs">
+      <DependentUpon>ogrEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrGuncelle.Designer.cs">
+      <DependentUpon>ogrGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\OgrSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\OgrSil.Designer.cs">
+      <DependentUpon>OgrSil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Anasayfa\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\ogrEkle.resx">
+      <DependentUpon>ogrEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\ogrGuncelle.resx">
+      <DependentUpon>ogrGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\OgrSil.resx">
+      <DependentUpon>OgrSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

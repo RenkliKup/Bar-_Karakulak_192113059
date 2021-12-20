@@ -16,7 +16,7 @@ namespace Barış_Karakulak_192113059
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Anasayfa());
+            Application.Run(new OgrenciIslemleri.ogrGuncelle());
         }
     }
 }
