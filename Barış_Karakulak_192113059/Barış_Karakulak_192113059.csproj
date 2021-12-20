@@ -190,7 +190,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="iadeEt\" />
     <Folder Include="KitapIslemleri\" />
+    <Folder Include="oduncAl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
