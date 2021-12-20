@@ -107,6 +107,12 @@
     <Compile Include="OgrenciIslemleri\ogrGuncelle.Designer.cs">
       <DependentUpon>ogrGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciIslemleri\ogrListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrListele.Designer.cs">
+      <DependentUpon>ogrListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgrenciIslemleri\OgrSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIslemleri\ogrGuncelle.resx">
       <DependentUpon>ogrGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\ogrListele.resx">
+      <DependentUpon>ogrListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIslemleri\OgrSil.resx">
       <DependentUpon>OgrSil.cs</DependentUpon>
