@@ -1,7 +1,7 @@
 ﻿
-namespace Barış_Karakulak_192113059.OgrenciIslemleri
+namespace Barış_Karakulak_192113059.KitapIslemleri
 {
-    partial class ogrGuncelle
+    partial class ktpListele
     {
         /// <summary>
         /// Required designer variable.
@@ -32,16 +32,6 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,204 +44,37 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.groupBox3.SuspendLayout();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroRadioButton6 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.metroRadioButton5);
-            this.groupBox3.Controls.Add(this.metroRadioButton4);
-            this.groupBox3.Controls.Add(this.metroTextBox4);
-            this.groupBox3.Controls.Add(this.metroTextBox3);
-            this.groupBox3.Controls.Add(this.metroTextBox2);
-            this.groupBox3.Controls.Add(this.metroLabel5);
-            this.groupBox3.Controls.Add(this.metroLabel4);
-            this.groupBox3.Controls.Add(this.metroLabel3);
-            this.groupBox3.Controls.Add(this.metroLabel2);
-            this.groupBox3.Location = new System.Drawing.Point(354, 50);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(228, 119);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Öğrenci Güncelle";
-            // 
-            // metroRadioButton5
-            // 
-            this.metroRadioButton5.AutoSize = true;
-            this.metroRadioButton5.Location = new System.Drawing.Point(152, 96);
-            this.metroRadioButton5.Name = "metroRadioButton5";
-            this.metroRadioButton5.Size = new System.Drawing.Size(57, 17);
-            this.metroRadioButton5.TabIndex = 23;
-            this.metroRadioButton5.Text = "Kadın";
-            this.metroRadioButton5.UseCustomBackColor = true;
-            this.metroRadioButton5.UseSelectable = true;
-            // 
-            // metroRadioButton4
-            // 
-            this.metroRadioButton4.AutoSize = true;
-            this.metroRadioButton4.Location = new System.Drawing.Point(75, 95);
-            this.metroRadioButton4.Name = "metroRadioButton4";
-            this.metroRadioButton4.Size = new System.Drawing.Size(55, 17);
-            this.metroRadioButton4.TabIndex = 22;
-            this.metroRadioButton4.Text = "Erkek";
-            this.metroRadioButton4.UseCustomBackColor = true;
-            this.metroRadioButton4.UseSelectable = true;
-            // 
-            // metroTextBox4
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(72, 68);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox4.TabIndex = 21;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox3
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(72, 42);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox3.TabIndex = 20;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox2
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(72, 17);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox2.TabIndex = 16;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(6, 92);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(60, 20);
-            this.metroLabel5.TabIndex = 19;
-            this.metroLabel5.Text = "Cinsiyet:";
-            this.metroLabel5.UseCustomBackColor = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(6, 70);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(49, 20);
-            this.metroLabel4.TabIndex = 18;
-            this.metroLabel4.Text = "Soyad:";
-            this.metroLabel4.UseCustomBackColor = true;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(6, 44);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(29, 20);
-            this.metroLabel3.TabIndex = 17;
-            this.metroLabel3.Text = "Ad:";
-            this.metroLabel3.UseCustomBackColor = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(6, 17);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(23, 20);
-            this.metroLabel2.TabIndex = 16;
-            this.metroLabel2.Text = "id:";
-            this.metroLabel2.UseCustomBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Location = new System.Drawing.Point(6, 34);
+            this.panel1.Location = new System.Drawing.Point(8, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(580, 10);
-            this.panel1.TabIndex = 26;
+            this.panel1.TabIndex = 38;
             // 
             // closelabel
             // 
             this.closelabel.BackColor = System.Drawing.Color.Teal;
             this.closelabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.closelabel.ForeColor = System.Drawing.Color.Crimson;
-            this.closelabel.Location = new System.Drawing.Point(568, 8);
+            this.closelabel.Location = new System.Drawing.Point(570, 4);
             this.closelabel.Name = "closelabel";
             this.closelabel.Size = new System.Drawing.Size(19, 23);
             this.closelabel.Style = MetroFramework.MetroColorStyle.Blue;
-            this.closelabel.TabIndex = 25;
+            this.closelabel.TabIndex = 37;
             this.closelabel.Text = "X";
             this.closelabel.UseCustomBackColor = true;
             this.closelabel.UseCustomForeColor = true;
-            this.closelabel.Click += new System.EventHandler(this.closelabel_Click);
             // 
             // groupBox1
             // 
@@ -259,12 +82,12 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.groupBox24);
             this.groupBox1.Controls.Add(this.metroTextBox1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 50);
+            this.groupBox1.Location = new System.Drawing.Point(7, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 119);
-            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Öğrenci Ara";
+            this.groupBox1.Text = "Kitap Ara";
             // 
             // metroButton2
             // 
@@ -313,9 +136,9 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroRadioButton2.AutoSize = true;
             this.metroRadioButton2.Location = new System.Drawing.Point(3, 44);
             this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(103, 17);
+            this.metroRadioButton2.Size = new System.Drawing.Size(98, 17);
             this.metroRadioButton2.TabIndex = 1;
-            this.metroRadioButton2.Text = "Soyad\'a Göre";
+            this.metroRadioButton2.Text = "Yazar\'a Göre";
             this.metroRadioButton2.UseCustomBackColor = true;
             this.metroRadioButton2.UseSelectable = true;
             // 
@@ -387,7 +210,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(6, 178);
+            this.metroGrid1.Location = new System.Drawing.Point(9, 174);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -403,23 +226,64 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(576, 170);
-            this.metroGrid1.TabIndex = 23;
+            this.metroGrid1.TabIndex = 35;
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(6, 355);
+            this.metroButton1.Location = new System.Drawing.Point(7, 351);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(129, 23);
-            this.metroButton1.TabIndex = 22;
-            this.metroButton1.Text = "Öğrenci Güncelle";
+            this.metroButton1.TabIndex = 34;
+            this.metroButton1.Text = "Listele";
             this.metroButton1.UseSelectable = true;
             // 
-            // ogrGuncelle
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.metroRadioButton6);
+            this.groupBox3.Controls.Add(this.metroRadioButton5);
+            this.groupBox3.Controls.Add(this.metroRadioButton4);
+            this.groupBox3.Location = new System.Drawing.Point(355, 46);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(228, 119);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Göre Listele";
+            // 
+            // metroRadioButton6
+            // 
+            this.metroRadioButton6.Location = new System.Drawing.Point(6, 47);
+            this.metroRadioButton6.Name = "metroRadioButton6";
+            this.metroRadioButton6.Size = new System.Drawing.Size(149, 17);
+            this.metroRadioButton6.TabIndex = 2;
+            this.metroRadioButton6.Text = "Alınmamış Kitaplar";
+            this.metroRadioButton6.UseCustomBackColor = true;
+            this.metroRadioButton6.UseSelectable = true;
+            // 
+            // metroRadioButton5
+            // 
+            this.metroRadioButton5.Location = new System.Drawing.Point(6, 24);
+            this.metroRadioButton5.Name = "metroRadioButton5";
+            this.metroRadioButton5.Size = new System.Drawing.Size(149, 17);
+            this.metroRadioButton5.TabIndex = 1;
+            this.metroRadioButton5.Text = "Alınmış Kitaplar";
+            this.metroRadioButton5.UseCustomBackColor = true;
+            this.metroRadioButton5.UseSelectable = true;
+            // 
+            // metroRadioButton4
+            // 
+            this.metroRadioButton4.AutoSize = true;
+            this.metroRadioButton4.Location = new System.Drawing.Point(6, 21);
+            this.metroRadioButton4.Name = "metroRadioButton4";
+            this.metroRadioButton4.Size = new System.Drawing.Size(16, 0);
+            this.metroRadioButton4.TabIndex = 0;
+            this.metroRadioButton4.UseSelectable = true;
+            // 
+            // ktpListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(597, 393);
+            this.ClientSize = new System.Drawing.Size(595, 387);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closelabel);
@@ -427,32 +291,20 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.metroButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ogrGuncelle";
-            this.Text = "ogrGuncelle";
-            this.Load += new System.EventHandler(this.ogrGuncelle_Load);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Name = "ktpListele";
+            this.Text = "ktpListele";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton5;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel closelabel;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -465,5 +317,9 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton6;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton5;
+        private MetroFramework.Controls.MetroRadioButton metroRadioButton4;
     }
 }

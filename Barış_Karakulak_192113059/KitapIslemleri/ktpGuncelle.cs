@@ -10,13 +10,17 @@ using System.Windows.Forms;
 
 namespace Barış_Karakulak_192113059.KitapIslemleri
 {
-    public partial class ktpEkle : Form
+    public partial class ktpGuncelle : Form
     {
-        public ktpEkle()
+        public ktpGuncelle()
         {
             InitializeComponent();
         }
 
+        private void closelabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -30,15 +34,9 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
             base.WndProc(ref m);
         }
-
-        private void ktpEkle_Load(object sender, EventArgs e)
+        private void ktpGuncelle_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void closelabel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

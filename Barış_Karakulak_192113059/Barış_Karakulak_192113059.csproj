@@ -101,6 +101,24 @@
     <Compile Include="KitapIslemleri\ktpEkle.Designer.cs">
       <DependentUpon>ktpEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitapIslemleri\ktpGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpGuncelle.Designer.cs">
+      <DependentUpon>ktpGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpListele.Designer.cs">
+      <DependentUpon>ktpListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpSil.Designer.cs">
+      <DependentUpon>ktpSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="OgrenciIslemleri\ogrAnasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitapIslemleri\ktpEkle.resx">
       <DependentUpon>ktpEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapIslemleri\ktpGuncelle.resx">
+      <DependentUpon>ktpGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapIslemleri\ktpListele.resx">
+      <DependentUpon>ktpListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapIslemleri\ktpSil.resx">
+      <DependentUpon>ktpSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIslemleri\ogrAnasayfa.resx">
       <DependentUpon>ogrAnasayfa.cs</DependentUpon>
