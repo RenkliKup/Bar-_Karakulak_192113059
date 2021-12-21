@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Barış_Karakulak_192113059.OgrenciIslemleri
 {
-    public partial class Anasayfa : Form
+    public partial class ogrAnasayfa : Form
     {
-        public Anasayfa()
+        public ogrAnasayfa()
         {
             InitializeComponent();
-        }
-
-        private void OgrenciIslemleri_Load(object sender, EventArgs e)
-        {
-
         }
         protected override void WndProc(ref Message m)
         {
@@ -34,6 +29,11 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
             base.WndProc(ref m);
         }
+        private void OgrenciIslemleri_Load(object sender, EventArgs e)
+        {
+
+        }
+       
 
         private void closelabel_Click(object sender, EventArgs e)
         {

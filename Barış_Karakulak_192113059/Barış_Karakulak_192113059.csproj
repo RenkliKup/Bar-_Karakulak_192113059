@@ -89,11 +89,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database2DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="OgrenciIslemleri\Anasayfa.cs">
+    <Compile Include="KitapIslemleri\ktpAnasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OgrenciIslemleri\Anasayfa.Designer.cs">
-      <DependentUpon>Anasayfa.cs</DependentUpon>
+    <Compile Include="KitapIslemleri\ktpAnasayfa.Designer.cs">
+      <DependentUpon>ktpAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapIslemleri\ktpEkle.Designer.cs">
+      <DependentUpon>ktpEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciIslemleri\ogrAnasayfa.Designer.cs">
+      <DependentUpon>ogrAnasayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="OgrenciIslemleri\ogrEkle.cs">
       <SubType>Form</SubType>
@@ -124,8 +136,14 @@
     <EmbeddedResource Include="Anasayfa\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OgrenciIslemleri\Anasayfa.resx">
-      <DependentUpon>Anasayfa.cs</DependentUpon>
+    <EmbeddedResource Include="KitapIslemleri\ktpAnasayfa.resx">
+      <DependentUpon>ktpAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapIslemleri\ktpEkle.resx">
+      <DependentUpon>ktpEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciIslemleri\ogrAnasayfa.resx">
+      <DependentUpon>ogrAnasayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIslemleri\ogrEkle.resx">
       <DependentUpon>ogrEkle.cs</DependentUpon>
@@ -191,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="iadeEt\" />
-    <Folder Include="KitapIslemleri\" />
     <Folder Include="oduncAl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

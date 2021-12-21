@@ -1,7 +1,7 @@
 ﻿
 namespace Barış_Karakulak_192113059.OgrenciIslemleri
 {
-    partial class Anasayfa
+    partial class ogrAnasayfa
     {
         /// <summary>
         /// Required designer variable.
