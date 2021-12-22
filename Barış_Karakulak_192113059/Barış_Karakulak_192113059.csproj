@@ -67,6 +67,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,6 +89,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="iadeEt\KtpIadeEt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iadeEt\KtpIadeEt.Designer.cs">
+      <DependentUpon>KtpIadeEt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iadeEt\ogrSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iadeEt\ogrSec.Designer.cs">
+      <DependentUpon>ogrSec.cs</DependentUpon>
     </Compile>
     <Compile Include="KitapIslemleri\ktpAnasayfa.cs">
       <SubType>Form</SubType>
@@ -118,6 +131,18 @@
     </Compile>
     <Compile Include="KitapIslemleri\ktpSil.Designer.cs">
       <DependentUpon>ktpSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oduncAl\ktpOduncAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oduncAl\ktpOduncAl.Designer.cs">
+      <DependentUpon>ktpOduncAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oduncAl\ogrSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oduncAl\ogrSec.Designer.cs">
+      <DependentUpon>ogrSec.cs</DependentUpon>
     </Compile>
     <Compile Include="OgrenciIslemleri\ogrAnasayfa.cs">
       <SubType>Form</SubType>
@@ -154,6 +179,12 @@
     <EmbeddedResource Include="Anasayfa\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="iadeEt\KtpIadeEt.resx">
+      <DependentUpon>KtpIadeEt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iadeEt\ogrSec.resx">
+      <DependentUpon>ogrSec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KitapIslemleri\ktpAnasayfa.resx">
       <DependentUpon>ktpAnasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +199,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitapIslemleri\ktpSil.resx">
       <DependentUpon>ktpSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oduncAl\ktpOduncAl.resx">
+      <DependentUpon>ktpOduncAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oduncAl\ogrSec.resx">
+      <DependentUpon>ogrSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgrenciIslemleri\ogrAnasayfa.resx">
       <DependentUpon>ogrAnasayfa.cs</DependentUpon>
@@ -234,9 +271,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="iadeEt\" />
-    <Folder Include="oduncAl\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

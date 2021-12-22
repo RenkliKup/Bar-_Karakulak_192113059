@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Barış_Karakulak_192113059.KitapIslemleri
+namespace Barış_Karakulak_192113059.oduncAl
 {
-    public partial class ktpListele : Form
+    public partial class ktpOduncAl : Form
     {
-        public ktpListele()
+        public ktpOduncAl()
         {
             InitializeComponent();
         }
 
-        private void metroUserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ktpListele_Load(object sender, EventArgs e)
+        private void ktpOduncAl_Load(object sender, EventArgs e)
         {
 
         }
