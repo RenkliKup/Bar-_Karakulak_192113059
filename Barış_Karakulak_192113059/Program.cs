@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Barış_Karakulak_192113059.OgrenciIslemleri;
 namespace Barış_Karakulak_192113059
 {
     static class Program
@@ -16,7 +16,7 @@ namespace Barış_Karakulak_192113059
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new iadeEt.KtpIadeEt());
+            Application.Run(new Anasayfa());
         }
     }
 }

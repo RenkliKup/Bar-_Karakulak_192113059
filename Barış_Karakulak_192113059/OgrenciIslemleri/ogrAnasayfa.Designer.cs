@@ -29,24 +29,25 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btn_ekle = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.btn_sil = new MetroFramework.Controls.MetroButton();
+            this.btn_Guncelle = new MetroFramework.Controls.MetroButton();
+            this.btn_Listele = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btn_ekle
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.Thistle;
-            this.metroButton1.Location = new System.Drawing.Point(12, 46);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(204, 224);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Öğrenci Ekle";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseSelectable = true;
+            this.btn_ekle.BackColor = System.Drawing.Color.Thistle;
+            this.btn_ekle.Location = new System.Drawing.Point(12, 46);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(204, 224);
+            this.btn_ekle.TabIndex = 0;
+            this.btn_ekle.Text = "Öğrenci Ekle";
+            this.btn_ekle.UseCustomBackColor = true;
+            this.btn_ekle.UseSelectable = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // panel1
             // 
@@ -71,53 +72,56 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.closelabel.UseCustomForeColor = true;
             this.closelabel.Click += new System.EventHandler(this.closelabel_Click);
             // 
-            // metroButton2
+            // btn_sil
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.Tomato;
-            this.metroButton2.Location = new System.Drawing.Point(222, 46);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(204, 224);
-            this.metroButton2.TabIndex = 6;
-            this.metroButton2.Text = "Öğrenci Sil";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
+            this.btn_sil.BackColor = System.Drawing.Color.Tomato;
+            this.btn_sil.Location = new System.Drawing.Point(222, 46);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(204, 224);
+            this.btn_sil.TabIndex = 6;
+            this.btn_sil.Text = "Öğrenci Sil";
+            this.btn_sil.UseCustomBackColor = true;
+            this.btn_sil.UseSelectable = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
-            // metroButton3
+            // btn_Guncelle
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.Turquoise;
-            this.metroButton3.Location = new System.Drawing.Point(12, 276);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(204, 224);
-            this.metroButton3.TabIndex = 7;
-            this.metroButton3.Text = "Öğrenci Güncelle";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseSelectable = true;
+            this.btn_Guncelle.BackColor = System.Drawing.Color.Turquoise;
+            this.btn_Guncelle.Location = new System.Drawing.Point(12, 276);
+            this.btn_Guncelle.Name = "btn_Guncelle";
+            this.btn_Guncelle.Size = new System.Drawing.Size(204, 224);
+            this.btn_Guncelle.TabIndex = 7;
+            this.btn_Guncelle.Text = "Öğrenci Güncelle";
+            this.btn_Guncelle.UseCustomBackColor = true;
+            this.btn_Guncelle.UseSelectable = true;
+            this.btn_Guncelle.Click += new System.EventHandler(this.btn_Guncelle_Click);
             // 
-            // metroButton4
+            // btn_Listele
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.Wheat;
-            this.metroButton4.Location = new System.Drawing.Point(222, 276);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(204, 224);
-            this.metroButton4.TabIndex = 8;
-            this.metroButton4.Text = "Öğrenci Listele/Ara";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseSelectable = true;
+            this.btn_Listele.BackColor = System.Drawing.Color.Wheat;
+            this.btn_Listele.Location = new System.Drawing.Point(222, 276);
+            this.btn_Listele.Name = "btn_Listele";
+            this.btn_Listele.Size = new System.Drawing.Size(204, 224);
+            this.btn_Listele.TabIndex = 8;
+            this.btn_Listele.Text = "Öğrenci Listele/Ara";
+            this.btn_Listele.UseCustomBackColor = true;
+            this.btn_Listele.UseSelectable = true;
+            this.btn_Listele.Click += new System.EventHandler(this.btn_Listele_Click);
             // 
-            // OgrenciIslemleri
+            // ogrAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(437, 509);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btn_Listele);
+            this.Controls.Add(this.btn_Guncelle);
+            this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closelabel);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_ekle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "OgrenciIslemleri";
+            this.Name = "ogrAnasayfa";
             this.Text = "OgrenciIslemleri";
             this.Load += new System.EventHandler(this.OgrenciIslemleri_Load);
             this.ResumeLayout(false);
@@ -126,11 +130,11 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btn_ekle;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel closelabel;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton btn_sil;
+        private MetroFramework.Controls.MetroButton btn_Guncelle;
+        private MetroFramework.Controls.MetroButton btn_Listele;
     }
 }

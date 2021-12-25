@@ -29,46 +29,49 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btn_listele = new MetroFramework.Controls.MetroButton();
+            this.btn_guncelle = new MetroFramework.Controls.MetroButton();
+            this.btn_sil = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btn_ekle = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // metroButton4
+            // btn_listele
             // 
-            this.metroButton4.BackColor = System.Drawing.Color.Wheat;
-            this.metroButton4.Location = new System.Drawing.Point(221, 275);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(204, 224);
-            this.metroButton4.TabIndex = 14;
-            this.metroButton4.Text = "Kitap Listele/Ara";
-            this.metroButton4.UseCustomBackColor = true;
-            this.metroButton4.UseSelectable = true;
+            this.btn_listele.BackColor = System.Drawing.Color.Wheat;
+            this.btn_listele.Location = new System.Drawing.Point(221, 275);
+            this.btn_listele.Name = "btn_listele";
+            this.btn_listele.Size = new System.Drawing.Size(204, 224);
+            this.btn_listele.TabIndex = 14;
+            this.btn_listele.Text = "Kitap Listele/Ara";
+            this.btn_listele.UseCustomBackColor = true;
+            this.btn_listele.UseSelectable = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
-            // metroButton3
+            // btn_guncelle
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.Turquoise;
-            this.metroButton3.Location = new System.Drawing.Point(11, 275);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(204, 224);
-            this.metroButton3.TabIndex = 13;
-            this.metroButton3.Text = "Kitap Güncelle";
-            this.metroButton3.UseCustomBackColor = true;
-            this.metroButton3.UseSelectable = true;
+            this.btn_guncelle.BackColor = System.Drawing.Color.Turquoise;
+            this.btn_guncelle.Location = new System.Drawing.Point(11, 275);
+            this.btn_guncelle.Name = "btn_guncelle";
+            this.btn_guncelle.Size = new System.Drawing.Size(204, 224);
+            this.btn_guncelle.TabIndex = 13;
+            this.btn_guncelle.Text = "Kitap Güncelle";
+            this.btn_guncelle.UseCustomBackColor = true;
+            this.btn_guncelle.UseSelectable = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
-            // metroButton2
+            // btn_sil
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.Tomato;
-            this.metroButton2.Location = new System.Drawing.Point(221, 45);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(204, 224);
-            this.metroButton2.TabIndex = 12;
-            this.metroButton2.Text = "Kitap Sil";
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
+            this.btn_sil.BackColor = System.Drawing.Color.Tomato;
+            this.btn_sil.Location = new System.Drawing.Point(221, 45);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(204, 224);
+            this.btn_sil.TabIndex = 12;
+            this.btn_sil.Text = "Kitap Sil";
+            this.btn_sil.UseCustomBackColor = true;
+            this.btn_sil.UseSelectable = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // panel1
             // 
@@ -93,16 +96,17 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.closelabel.UseCustomForeColor = true;
             this.closelabel.Click += new System.EventHandler(this.closelabel_Click);
             // 
-            // metroButton1
+            // btn_ekle
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.Thistle;
-            this.metroButton1.Location = new System.Drawing.Point(11, 45);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(204, 224);
-            this.metroButton1.TabIndex = 9;
-            this.metroButton1.Text = "Kitap Ekle";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseSelectable = true;
+            this.btn_ekle.BackColor = System.Drawing.Color.Thistle;
+            this.btn_ekle.Location = new System.Drawing.Point(11, 45);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(204, 224);
+            this.btn_ekle.TabIndex = 9;
+            this.btn_ekle.Text = "Kitap Ekle";
+            this.btn_ekle.UseCustomBackColor = true;
+            this.btn_ekle.UseSelectable = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // ktpAnasayfa
             // 
@@ -110,12 +114,12 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(437, 509);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btn_listele);
+            this.Controls.Add(this.btn_guncelle);
+            this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closelabel);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_ekle);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ktpAnasayfa";
@@ -127,11 +131,11 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btn_listele;
+        private MetroFramework.Controls.MetroButton btn_guncelle;
+        private MetroFramework.Controls.MetroButton btn_sil;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel closelabel;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btn_ekle;
     }
 }

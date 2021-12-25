@@ -49,5 +49,30 @@ namespace Barış_Karakulak_192113059
         {
             this.Close();
         }
+
+        private void btn_ogr_islemleri_Click(object sender, EventArgs e)
+        {
+            OgrenciIslemleri.ogrAnasayfa ogrAnasayfa = new OgrenciIslemleri.ogrAnasayfa();
+            ogrAnasayfa.Show();
+        }
+
+        private void btn_ktp_islemleri_Click(object sender, EventArgs e)
+        {
+            KitapIslemleri.ktpAnasayfa ktpAnasayfa = new KitapIslemleri.ktpAnasayfa();
+            ktpAnasayfa.Show();
+
+        }
+
+        private void btn_odunc_al_Click(object sender, EventArgs e)
+        {
+            oduncAl.ktpOduncAl ktpOduncAl = new oduncAl.ktpOduncAl();
+            ktpOduncAl.Show();
+        }
+
+        private void btn_iade_et_Click(object sender, EventArgs e)
+        {
+            iadeEt.KtpIadeEt iadeEt = new iadeEt.KtpIadeEt();
+            iadeEt.Show();
+        }
     }
 }

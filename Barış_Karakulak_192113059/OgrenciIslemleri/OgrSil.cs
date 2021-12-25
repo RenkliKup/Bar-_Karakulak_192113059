@@ -12,10 +12,12 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 {
     public partial class OgrSil : Form
     {
+
         public OgrSil()
         {
             InitializeComponent();
         }
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -26,16 +28,18 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
                         m.Result = (IntPtr)0x2;
                     return;
             }
-        }
-        private void metroTextBox2_Click(object sender, EventArgs e)
-        {
 
+            base.WndProc(ref m);
         }
 
         private void OgrSil_Load(object sender, EventArgs e)
         {
 
         }
+        
+
+        
+        
 
         private void closelabel_Click(object sender, EventArgs e)
         {

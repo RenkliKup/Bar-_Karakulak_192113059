@@ -56,6 +56,7 @@ namespace Barış_Karakulak_192113059
             this.btn_ogr_islemleri.UseCustomBackColor = true;
             this.btn_ogr_islemleri.UseCustomForeColor = true;
             this.btn_ogr_islemleri.UseSelectable = true;
+            this.btn_ogr_islemleri.Click += new System.EventHandler(this.btn_ogr_islemleri_Click);
             // 
             // btn_ktp_islemleri
             // 
@@ -70,6 +71,7 @@ namespace Barış_Karakulak_192113059
             this.btn_ktp_islemleri.UseCustomForeColor = true;
             this.btn_ktp_islemleri.UseSelectable = true;
             this.btn_ktp_islemleri.UseStyleColors = true;
+            this.btn_ktp_islemleri.Click += new System.EventHandler(this.btn_ktp_islemleri_Click);
             // 
             // closelabel
             // 
@@ -133,6 +135,7 @@ namespace Barış_Karakulak_192113059
             this.btn_odunc_al.UseCustomBackColor = true;
             this.btn_odunc_al.UseCustomForeColor = true;
             this.btn_odunc_al.UseSelectable = true;
+            this.btn_odunc_al.Click += new System.EventHandler(this.btn_odunc_al_Click);
             // 
             // btn_iade_et
             // 
@@ -147,6 +150,7 @@ namespace Barış_Karakulak_192113059
             this.btn_iade_et.UseCustomForeColor = true;
             this.btn_iade_et.UseSelectable = true;
             this.btn_iade_et.UseStyleColors = true;
+            this.btn_iade_et.Click += new System.EventHandler(this.btn_iade_et_Click);
             // 
             // metroLabel3
             // 
