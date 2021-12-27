@@ -18,9 +18,9 @@ namespace DataTransactionLayer
         {
             return studentProvider.DeleteStudent(id);
         }
-        public Tuple<Boolean, string> UpdateStudentContext(int id, Student book)
+        public Tuple<Boolean, string> UpdateStudentContext(int id, Student student)
         {
-            return studentProvider.UpdateStudent(book, id);
+            return studentProvider.UpdateStudent(student, id);
         }
         public Tuple<Boolean, string, Student> getOneStudent(int id)
         {
@@ -29,6 +29,15 @@ namespace DataTransactionLayer
         public List<Student> GetStudents()
         {
             return studentProvider.ReadStudent();
+        }
+        public List<Student> GoreAra(string aranacakDeger,string satirAdi)
+        {
+            return studentProvider.GoreAra(aranacakDeger,satirAdi);
+        }
+        
+        public List<Student> GoreListele(string satirAdi, bool istenenDeger)
+        {
+            return studentProvider.GoreListele(satirAdi, istenenDeger);
         }
     }
 }

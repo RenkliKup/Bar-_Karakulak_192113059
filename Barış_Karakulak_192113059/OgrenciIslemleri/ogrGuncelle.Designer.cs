@@ -29,15 +29,15 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton5 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.radio_guncelle_kadin = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_guncelle_erkek = new MetroFramework.Controls.MetroRadioButton();
+            this.txt_guncelle_soyad = new MetroFramework.Controls.MetroTextBox();
+            this.txt_guncelle_ad = new MetroFramework.Controls.MetroTextBox();
+            this.txt_guncelle_id = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -45,28 +45,28 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btn_ara = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.radio_ogr_id = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_soyad = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_ad = new MetroFramework.Controls.MetroRadioButton();
+            this.txt_aranan_deger = new MetroFramework.Controls.MetroTextBox();
+            this.dataGrid_Ogr_guncelle = new MetroFramework.Controls.MetroGrid();
+            this.btn_guncelle = new MetroFramework.Controls.MetroButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Ogr_guncelle)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.metroRadioButton5);
-            this.groupBox3.Controls.Add(this.metroRadioButton4);
-            this.groupBox3.Controls.Add(this.metroTextBox4);
-            this.groupBox3.Controls.Add(this.metroTextBox3);
-            this.groupBox3.Controls.Add(this.metroTextBox2);
+            this.groupBox3.Controls.Add(this.radio_guncelle_kadin);
+            this.groupBox3.Controls.Add(this.radio_guncelle_erkek);
+            this.groupBox3.Controls.Add(this.txt_guncelle_soyad);
+            this.groupBox3.Controls.Add(this.txt_guncelle_ad);
+            this.groupBox3.Controls.Add(this.txt_guncelle_id);
             this.groupBox3.Controls.Add(this.metroLabel5);
             this.groupBox3.Controls.Add(this.metroLabel4);
             this.groupBox3.Controls.Add(this.metroLabel3);
@@ -78,117 +78,119 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Öğrenci Güncelle";
             // 
-            // metroRadioButton5
+            // radio_guncelle_kadin
             // 
-            this.metroRadioButton5.AutoSize = true;
-            this.metroRadioButton5.Location = new System.Drawing.Point(152, 96);
-            this.metroRadioButton5.Name = "metroRadioButton5";
-            this.metroRadioButton5.Size = new System.Drawing.Size(57, 17);
-            this.metroRadioButton5.TabIndex = 23;
-            this.metroRadioButton5.Text = "Kadın";
-            this.metroRadioButton5.UseCustomBackColor = true;
-            this.metroRadioButton5.UseSelectable = true;
+            this.radio_guncelle_kadin.AutoSize = true;
+            this.radio_guncelle_kadin.Location = new System.Drawing.Point(152, 96);
+            this.radio_guncelle_kadin.Name = "radio_guncelle_kadin";
+            this.radio_guncelle_kadin.Size = new System.Drawing.Size(57, 17);
+            this.radio_guncelle_kadin.TabIndex = 23;
+            this.radio_guncelle_kadin.Text = "Kadın";
+            this.radio_guncelle_kadin.UseCustomBackColor = true;
+            this.radio_guncelle_kadin.UseSelectable = true;
             // 
-            // metroRadioButton4
+            // radio_guncelle_erkek
             // 
-            this.metroRadioButton4.AutoSize = true;
-            this.metroRadioButton4.Location = new System.Drawing.Point(75, 95);
-            this.metroRadioButton4.Name = "metroRadioButton4";
-            this.metroRadioButton4.Size = new System.Drawing.Size(55, 17);
-            this.metroRadioButton4.TabIndex = 22;
-            this.metroRadioButton4.Text = "Erkek";
-            this.metroRadioButton4.UseCustomBackColor = true;
-            this.metroRadioButton4.UseSelectable = true;
+            this.radio_guncelle_erkek.AutoSize = true;
+            this.radio_guncelle_erkek.Location = new System.Drawing.Point(75, 95);
+            this.radio_guncelle_erkek.Name = "radio_guncelle_erkek";
+            this.radio_guncelle_erkek.Size = new System.Drawing.Size(55, 17);
+            this.radio_guncelle_erkek.TabIndex = 22;
+            this.radio_guncelle_erkek.Text = "Erkek";
+            this.radio_guncelle_erkek.UseCustomBackColor = true;
+            this.radio_guncelle_erkek.UseSelectable = true;
             // 
-            // metroTextBox4
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(72, 68);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox4.TabIndex = 21;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox3
+            // txt_guncelle_soyad
             // 
             // 
             // 
             // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(72, 42);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox3.TabIndex = 20;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_guncelle_soyad.CustomButton.Image = null;
+            this.txt_guncelle_soyad.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_guncelle_soyad.CustomButton.Name = "";
+            this.txt_guncelle_soyad.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_guncelle_soyad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_guncelle_soyad.CustomButton.TabIndex = 1;
+            this.txt_guncelle_soyad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_guncelle_soyad.CustomButton.UseSelectable = true;
+            this.txt_guncelle_soyad.CustomButton.Visible = false;
+            this.txt_guncelle_soyad.Lines = new string[0];
+            this.txt_guncelle_soyad.Location = new System.Drawing.Point(72, 68);
+            this.txt_guncelle_soyad.MaxLength = 32767;
+            this.txt_guncelle_soyad.Name = "txt_guncelle_soyad";
+            this.txt_guncelle_soyad.PasswordChar = '\0';
+            this.txt_guncelle_soyad.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_guncelle_soyad.SelectedText = "";
+            this.txt_guncelle_soyad.SelectionLength = 0;
+            this.txt_guncelle_soyad.SelectionStart = 0;
+            this.txt_guncelle_soyad.ShortcutsEnabled = true;
+            this.txt_guncelle_soyad.Size = new System.Drawing.Size(150, 23);
+            this.txt_guncelle_soyad.TabIndex = 21;
+            this.txt_guncelle_soyad.UseSelectable = true;
+            this.txt_guncelle_soyad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_guncelle_soyad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox2
-            // 
-            // 
+            // txt_guncelle_ad
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(72, 17);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(150, 23);
-            this.metroTextBox2.TabIndex = 16;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txt_guncelle_ad.CustomButton.Image = null;
+            this.txt_guncelle_ad.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_guncelle_ad.CustomButton.Name = "";
+            this.txt_guncelle_ad.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_guncelle_ad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_guncelle_ad.CustomButton.TabIndex = 1;
+            this.txt_guncelle_ad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_guncelle_ad.CustomButton.UseSelectable = true;
+            this.txt_guncelle_ad.CustomButton.Visible = false;
+            this.txt_guncelle_ad.Lines = new string[0];
+            this.txt_guncelle_ad.Location = new System.Drawing.Point(72, 42);
+            this.txt_guncelle_ad.MaxLength = 32767;
+            this.txt_guncelle_ad.Name = "txt_guncelle_ad";
+            this.txt_guncelle_ad.PasswordChar = '\0';
+            this.txt_guncelle_ad.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_guncelle_ad.SelectedText = "";
+            this.txt_guncelle_ad.SelectionLength = 0;
+            this.txt_guncelle_ad.SelectionStart = 0;
+            this.txt_guncelle_ad.ShortcutsEnabled = true;
+            this.txt_guncelle_ad.Size = new System.Drawing.Size(150, 23);
+            this.txt_guncelle_ad.TabIndex = 20;
+            this.txt_guncelle_ad.UseSelectable = true;
+            this.txt_guncelle_ad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_guncelle_ad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_guncelle_id
+            // 
+            // 
+            // 
+            // 
+            this.txt_guncelle_id.CustomButton.Image = null;
+            this.txt_guncelle_id.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_guncelle_id.CustomButton.Name = "";
+            this.txt_guncelle_id.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_guncelle_id.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_guncelle_id.CustomButton.TabIndex = 1;
+            this.txt_guncelle_id.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_guncelle_id.CustomButton.UseSelectable = true;
+            this.txt_guncelle_id.CustomButton.Visible = false;
+            this.txt_guncelle_id.Lines = new string[0];
+            this.txt_guncelle_id.Location = new System.Drawing.Point(72, 17);
+            this.txt_guncelle_id.MaxLength = 32767;
+            this.txt_guncelle_id.Name = "txt_guncelle_id";
+            this.txt_guncelle_id.PasswordChar = '\0';
+            this.txt_guncelle_id.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_guncelle_id.SelectedText = "";
+            this.txt_guncelle_id.SelectionLength = 0;
+            this.txt_guncelle_id.SelectionStart = 0;
+            this.txt_guncelle_id.ShortcutsEnabled = true;
+            this.txt_guncelle_id.Size = new System.Drawing.Size(150, 23);
+            this.txt_guncelle_id.TabIndex = 16;
+            this.txt_guncelle_id.UseSelectable = true;
+            this.txt_guncelle_id.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_guncelle_id.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_guncelle_id.TextChanged += new System.EventHandler(this.txt_guncelle_id_TextChanged);
+            this.txt_guncelle_id.Click += new System.EventHandler(this.txt_guncelle_id_Click);
             // 
             // metroLabel5
             // 
@@ -255,10 +257,10 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroButton2);
+            this.groupBox1.Controls.Add(this.btn_ara);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.groupBox24);
-            this.groupBox1.Controls.Add(this.metroTextBox1);
+            this.groupBox1.Controls.Add(this.txt_aranan_deger);
             this.groupBox1.Location = new System.Drawing.Point(5, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 119);
@@ -266,14 +268,15 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Ara";
             // 
-            // metroButton2
+            // btn_ara
             // 
-            this.metroButton2.Location = new System.Drawing.Point(6, 81);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(175, 23);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Ara";
-            this.metroButton2.UseSelectable = true;
+            this.btn_ara.Location = new System.Drawing.Point(6, 81);
+            this.btn_ara.Name = "btn_ara";
+            this.btn_ara.Size = new System.Drawing.Size(175, 23);
+            this.btn_ara.TabIndex = 4;
+            this.btn_ara.Text = "Ara";
+            this.btn_ara.UseSelectable = true;
+            this.btn_ara.Click += new System.EventHandler(this.btn_ara_Click);
             // 
             // metroLabel1
             // 
@@ -287,9 +290,9 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.metroRadioButton3);
-            this.groupBox24.Controls.Add(this.metroRadioButton2);
-            this.groupBox24.Controls.Add(this.metroRadioButton1);
+            this.groupBox24.Controls.Add(this.radio_ogr_id);
+            this.groupBox24.Controls.Add(this.radio_ogr_soyad);
+            this.groupBox24.Controls.Add(this.radio_ogr_ad);
             this.groupBox24.Location = new System.Drawing.Point(187, 10);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(146, 99);
@@ -297,122 +300,127 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Göre Ara";
             // 
-            // metroRadioButton3
+            // radio_ogr_id
             // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(3, 66);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(84, 17);
-            this.metroRadioButton3.TabIndex = 2;
-            this.metroRadioButton3.Text = "Id\'ye Göre";
-            this.metroRadioButton3.UseCustomBackColor = true;
-            this.metroRadioButton3.UseSelectable = true;
+            this.radio_ogr_id.AutoSize = true;
+            this.radio_ogr_id.Location = new System.Drawing.Point(3, 66);
+            this.radio_ogr_id.Name = "radio_ogr_id";
+            this.radio_ogr_id.Size = new System.Drawing.Size(84, 17);
+            this.radio_ogr_id.TabIndex = 2;
+            this.radio_ogr_id.Text = "Id\'ye Göre";
+            this.radio_ogr_id.UseCustomBackColor = true;
+            this.radio_ogr_id.UseSelectable = true;
             // 
-            // metroRadioButton2
+            // radio_ogr_soyad
             // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(3, 44);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(103, 17);
-            this.metroRadioButton2.TabIndex = 1;
-            this.metroRadioButton2.Text = "Soyad\'a Göre";
-            this.metroRadioButton2.UseCustomBackColor = true;
-            this.metroRadioButton2.UseSelectable = true;
+            this.radio_ogr_soyad.AutoSize = true;
+            this.radio_ogr_soyad.Location = new System.Drawing.Point(3, 44);
+            this.radio_ogr_soyad.Name = "radio_ogr_soyad";
+            this.radio_ogr_soyad.Size = new System.Drawing.Size(103, 17);
+            this.radio_ogr_soyad.TabIndex = 1;
+            this.radio_ogr_soyad.Text = "Soyad\'a Göre";
+            this.radio_ogr_soyad.UseCustomBackColor = true;
+            this.radio_ogr_soyad.UseSelectable = true;
             // 
-            // metroRadioButton1
+            // radio_ogr_ad
             // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(3, 21);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(83, 17);
-            this.metroRadioButton1.TabIndex = 0;
-            this.metroRadioButton1.Text = "Ad\'a Göre";
-            this.metroRadioButton1.UseCustomBackColor = true;
-            this.metroRadioButton1.UseSelectable = true;
+            this.radio_ogr_ad.AutoSize = true;
+            this.radio_ogr_ad.Location = new System.Drawing.Point(3, 21);
+            this.radio_ogr_ad.Name = "radio_ogr_ad";
+            this.radio_ogr_ad.Size = new System.Drawing.Size(83, 17);
+            this.radio_ogr_ad.TabIndex = 0;
+            this.radio_ogr_ad.Text = "Ad\'a Göre";
+            this.radio_ogr_ad.UseCustomBackColor = true;
+            this.radio_ogr_ad.UseSelectable = true;
             // 
-            // metroTextBox1
-            // 
-            // 
+            // txt_aranan_deger
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(153, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(6, 52);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(175, 23);
-            this.metroTextBox1.TabIndex = 2;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroGrid1
             // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(6, 178);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidth = 51;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.RowTemplate.Height = 24;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(576, 170);
-            this.metroGrid1.TabIndex = 23;
+            this.txt_aranan_deger.CustomButton.Image = null;
+            this.txt_aranan_deger.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.txt_aranan_deger.CustomButton.Name = "";
+            this.txt_aranan_deger.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_aranan_deger.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_aranan_deger.CustomButton.TabIndex = 1;
+            this.txt_aranan_deger.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_aranan_deger.CustomButton.UseSelectable = true;
+            this.txt_aranan_deger.CustomButton.Visible = false;
+            this.txt_aranan_deger.Lines = new string[0];
+            this.txt_aranan_deger.Location = new System.Drawing.Point(6, 52);
+            this.txt_aranan_deger.MaxLength = 32767;
+            this.txt_aranan_deger.Name = "txt_aranan_deger";
+            this.txt_aranan_deger.PasswordChar = '\0';
+            this.txt_aranan_deger.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_aranan_deger.SelectedText = "";
+            this.txt_aranan_deger.SelectionLength = 0;
+            this.txt_aranan_deger.SelectionStart = 0;
+            this.txt_aranan_deger.ShortcutsEnabled = true;
+            this.txt_aranan_deger.Size = new System.Drawing.Size(175, 23);
+            this.txt_aranan_deger.TabIndex = 2;
+            this.txt_aranan_deger.UseSelectable = true;
+            this.txt_aranan_deger.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_aranan_deger.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_aranan_deger.ClearClicked += new MetroFramework.Controls.MetroTextBox.LUClear(this.txt_aranan_deger_ClearClicked);
+            this.txt_aranan_deger.TextChanged += new System.EventHandler(this.txt_aranan_deger_TextChanged);
             // 
-            // metroButton1
+            // dataGrid_Ogr_guncelle
             // 
-            this.metroButton1.Location = new System.Drawing.Point(6, 355);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(129, 23);
-            this.metroButton1.TabIndex = 22;
-            this.metroButton1.Text = "Öğrenci Güncelle";
-            this.metroButton1.UseSelectable = true;
+            this.dataGrid_Ogr_guncelle.AllowUserToResizeRows = false;
+            this.dataGrid_Ogr_guncelle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGrid_Ogr_guncelle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGrid_Ogr_guncelle.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGrid_Ogr_guncelle.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_Ogr_guncelle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGrid_Ogr_guncelle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_Ogr_guncelle.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGrid_Ogr_guncelle.EnableHeadersVisualStyles = false;
+            this.dataGrid_Ogr_guncelle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGrid_Ogr_guncelle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGrid_Ogr_guncelle.Location = new System.Drawing.Point(6, 178);
+            this.dataGrid_Ogr_guncelle.Name = "dataGrid_Ogr_guncelle";
+            this.dataGrid_Ogr_guncelle.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_Ogr_guncelle.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGrid_Ogr_guncelle.RowHeadersWidth = 51;
+            this.dataGrid_Ogr_guncelle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGrid_Ogr_guncelle.RowTemplate.Height = 24;
+            this.dataGrid_Ogr_guncelle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrid_Ogr_guncelle.Size = new System.Drawing.Size(576, 170);
+            this.dataGrid_Ogr_guncelle.TabIndex = 23;
+            this.dataGrid_Ogr_guncelle.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Ogr_guncelle_CellClick);
+            this.dataGrid_Ogr_guncelle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Ogr_guncelle_CellContentClick);
+            // 
+            // btn_guncelle
+            // 
+            this.btn_guncelle.Location = new System.Drawing.Point(6, 355);
+            this.btn_guncelle.Name = "btn_guncelle";
+            this.btn_guncelle.Size = new System.Drawing.Size(129, 23);
+            this.btn_guncelle.TabIndex = 22;
+            this.btn_guncelle.Text = "Öğrenci Güncelle";
+            this.btn_guncelle.UseSelectable = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // ogrGuncelle
             // 
@@ -424,8 +432,8 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closelabel);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.metroGrid1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.dataGrid_Ogr_guncelle);
+            this.Controls.Add(this.btn_guncelle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ogrGuncelle";
             this.Text = "ogrGuncelle";
@@ -436,7 +444,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox1.PerformLayout();
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Ogr_guncelle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,11 +452,11 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton5;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroRadioButton radio_guncelle_kadin;
+        private MetroFramework.Controls.MetroRadioButton radio_guncelle_erkek;
+        private MetroFramework.Controls.MetroTextBox txt_guncelle_soyad;
+        private MetroFramework.Controls.MetroTextBox txt_guncelle_ad;
+        private MetroFramework.Controls.MetroTextBox txt_guncelle_id;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -456,14 +464,14 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel closelabel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btn_ara;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.GroupBox groupBox24;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_id;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_soyad;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_ad;
+        private MetroFramework.Controls.MetroTextBox txt_aranan_deger;
+        private MetroFramework.Controls.MetroGrid dataGrid_Ogr_guncelle;
+        private MetroFramework.Controls.MetroButton btn_guncelle;
     }
 }

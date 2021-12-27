@@ -23,8 +23,8 @@ namespace DataTransactionLayer
                     conn.Open();
                     OleDbCommand cmd = new SqlConnection().
                         cmd(
-                        $"INSERT INTO Students VALUES({student.name}," +
-                        $"{student.surname},{student.sex})"
+                        $"INSERT INTO Students (Student_name,Student_surname,Student_sex)  VALUES('{student.name}'," +
+                        $"'{student.surname}',{student.sex})"
                         , conn
                         );
                     if (cmd.ExecuteNonQuery() != -1)
@@ -95,7 +95,7 @@ namespace DataTransactionLayer
                 {
                     conn.Open();
                     OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Students SET Student_name='{student.name}',Student_surname='{student.surname}'," +
-                        $"Student_sex='{student.sex}' Where Student_id={id}", conn);
+                        $"Student_sex={student.sex} Where Student_id={id}", conn);
                     if (cmd.ExecuteNonQuery() != -1)
                     {
                         return Tuple.Create(true, "Başarılı");
@@ -200,5 +200,81 @@ namespace DataTransactionLayer
             }
         }
         #endregion
+        #region GoreAra
+        public List<Student> GoreAra(string arananDeger,string satirAdi)
+        {
+            List<Student> students = new List<Student>();
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Students WHERE {satirAdi} LIKE '%{arananDeger}%'", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        students.Add(new Student(
+                            read.GetInt32(0),
+                            read.GetString(1),
+                            read.GetString(2),
+                            read.GetBoolean(3)
+
+                            ));
+                    }
+                    read.Close();
+
+                    return students;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+        #endregion
+
+       
+        #region GoreListele2
+        public List<Student> GoreListele(string satirAdi, bool istenendeger1)
+        {
+            List<Student> students = new List<Student>();
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Students WHERE {satirAdi}={istenendeger1}", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        students.Add(new Student(
+                            read.GetInt32(0),
+                            read.GetString(1),
+                            read.GetString(2),
+                            read.GetBoolean(3)
+
+                            ));
+                    }
+                    read.Close();
+
+                    return students;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+#endregion
     }
 }

@@ -29,56 +29,57 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btn_ogr_ekle = new MetroFramework.Controls.MetroButton();
+            this.radio_erkek = new System.Windows.Forms.RadioButton();
+            this.radio_kadın = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txt_ogr_ad = new MetroFramework.Controls.MetroTextBox();
             this.txt_ogr_soyad = new MetroFramework.Controls.MetroTextBox();
+            this.txt_ogr_ad = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btn_ogr_ekle
             // 
-            this.metroButton1.Location = new System.Drawing.Point(12, 396);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(85, 23);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Ekle";
-            this.metroButton1.UseSelectable = true;
+            this.btn_ogr_ekle.Location = new System.Drawing.Point(12, 396);
+            this.btn_ogr_ekle.Name = "btn_ogr_ekle";
+            this.btn_ogr_ekle.Size = new System.Drawing.Size(85, 23);
+            this.btn_ogr_ekle.TabIndex = 0;
+            this.btn_ogr_ekle.Text = "Ekle";
+            this.btn_ogr_ekle.UseSelectable = true;
+            this.btn_ogr_ekle.Click += new System.EventHandler(this.btn_ogr_ekle_Click);
             // 
-            // radioButton1
+            // radio_erkek
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 21);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radio_erkek.AutoSize = true;
+            this.radio_erkek.Location = new System.Drawing.Point(21, 21);
+            this.radio_erkek.Name = "radio_erkek";
+            this.radio_erkek.Size = new System.Drawing.Size(65, 21);
+            this.radio_erkek.TabIndex = 1;
+            this.radio_erkek.TabStop = true;
+            this.radio_erkek.Text = "Erkek";
+            this.radio_erkek.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radio_kadın
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 67);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 21);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radio_kadın.AutoSize = true;
+            this.radio_kadın.Location = new System.Drawing.Point(21, 67);
+            this.radio_kadın.Name = "radio_kadın";
+            this.radio_kadın.Size = new System.Drawing.Size(65, 21);
+            this.radio_kadın.TabIndex = 2;
+            this.radio_kadın.TabStop = true;
+            this.radio_kadın.Text = "Kadın";
+            this.radio_kadın.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radio_kadın);
+            this.groupBox1.Controls.Add(this.radio_erkek);
             this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(145, 100);
@@ -99,25 +100,35 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ad/Soyad";
             // 
-            // metroLabel1
+            // txt_ogr_soyad
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 26);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(29, 20);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Ad:";
-            this.metroLabel1.UseCustomBackColor = true;
             // 
-            // metroLabel2
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 83);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(46, 20);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Soyad";
-            this.metroLabel2.UseCustomBackColor = true;
+            // 
+            this.txt_ogr_soyad.CustomButton.Image = null;
+            this.txt_ogr_soyad.CustomButton.Location = new System.Drawing.Point(111, 1);
+            this.txt_ogr_soyad.CustomButton.Name = "";
+            this.txt_ogr_soyad.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_ogr_soyad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_ogr_soyad.CustomButton.TabIndex = 1;
+            this.txt_ogr_soyad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_ogr_soyad.CustomButton.UseSelectable = true;
+            this.txt_ogr_soyad.CustomButton.Visible = false;
+            this.txt_ogr_soyad.Lines = new string[0];
+            this.txt_ogr_soyad.Location = new System.Drawing.Point(6, 106);
+            this.txt_ogr_soyad.MaxLength = 32767;
+            this.txt_ogr_soyad.Name = "txt_ogr_soyad";
+            this.txt_ogr_soyad.PasswordChar = '\0';
+            this.txt_ogr_soyad.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_ogr_soyad.SelectedText = "";
+            this.txt_ogr_soyad.SelectionLength = 0;
+            this.txt_ogr_soyad.SelectionStart = 0;
+            this.txt_ogr_soyad.ShortcutsEnabled = true;
+            this.txt_ogr_soyad.Size = new System.Drawing.Size(133, 23);
+            this.txt_ogr_soyad.TabIndex = 3;
+            this.txt_ogr_soyad.UseSelectable = true;
+            this.txt_ogr_soyad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_ogr_soyad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_ogr_ad
             // 
@@ -125,7 +136,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             // 
             // 
             this.txt_ogr_ad.CustomButton.Image = null;
-            this.txt_ogr_ad.CustomButton.Location = new System.Drawing.Point(117, 1);
+            this.txt_ogr_ad.CustomButton.Location = new System.Drawing.Point(111, 1);
             this.txt_ogr_ad.CustomButton.Name = "";
             this.txt_ogr_ad.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_ogr_ad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -149,35 +160,25 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.txt_ogr_ad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ogr_ad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_ogr_soyad
+            // metroLabel2
             // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(0, 83);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(46, 20);
+            this.metroLabel2.TabIndex = 1;
+            this.metroLabel2.Text = "Soyad";
+            this.metroLabel2.UseCustomBackColor = true;
             // 
+            // metroLabel1
             // 
-            // 
-            this.txt_ogr_soyad.CustomButton.Image = null;
-            this.txt_ogr_soyad.CustomButton.Location = new System.Drawing.Point(117, 1);
-            this.txt_ogr_soyad.CustomButton.Name = "";
-            this.txt_ogr_soyad.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_ogr_soyad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_ogr_soyad.CustomButton.TabIndex = 1;
-            this.txt_ogr_soyad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_ogr_soyad.CustomButton.UseSelectable = true;
-            this.txt_ogr_soyad.CustomButton.Visible = false;
-            this.txt_ogr_soyad.Lines = new string[0];
-            this.txt_ogr_soyad.Location = new System.Drawing.Point(6, 106);
-            this.txt_ogr_soyad.MaxLength = 32767;
-            this.txt_ogr_soyad.Name = "txt_ogr_soyad";
-            this.txt_ogr_soyad.PasswordChar = '\0';
-            this.txt_ogr_soyad.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_ogr_soyad.SelectedText = "";
-            this.txt_ogr_soyad.SelectionLength = 0;
-            this.txt_ogr_soyad.SelectionStart = 0;
-            this.txt_ogr_soyad.ShortcutsEnabled = true;
-            this.txt_ogr_soyad.Size = new System.Drawing.Size(133, 23);
-            this.txt_ogr_soyad.TabIndex = 3;
-            this.txt_ogr_soyad.UseSelectable = true;
-            this.txt_ogr_soyad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_ogr_soyad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(6, 26);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(29, 20);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "Ad:";
+            this.metroLabel1.UseCustomBackColor = true;
             // 
             // panel1
             // 
@@ -213,7 +214,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.Controls.Add(this.closelabel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_ogr_ekle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ogrEkle";
             this.Text = "ogrEkle";
@@ -228,9 +229,9 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private MetroFramework.Controls.MetroButton btn_ogr_ekle;
+        private System.Windows.Forms.RadioButton radio_erkek;
+        private System.Windows.Forms.RadioButton radio_kadın;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroTextBox txt_ogr_soyad;

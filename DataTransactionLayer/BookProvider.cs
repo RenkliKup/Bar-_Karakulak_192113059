@@ -197,6 +197,41 @@ namespace DataTransactionLayer
             }
         }
         #endregion
+        #region AdaGoreListele
+        public List<Book> AdaGoreListele()
+        {
+            List<Book> books = new List<Book>();
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd("SELECT * FROM Books WHERE Book_name LIKE '%or%'", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        books.Add(new Book(
+                            read.GetInt32(0),
+                            read.GetString(1),
+                            read.GetString(2),
+                            read.GetString(3),
+                            read.GetInt32(4)
+                            ));
+                    }
+                    read.Close();
+                    return books;
+                }
 
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+        #endregion
     }
 }

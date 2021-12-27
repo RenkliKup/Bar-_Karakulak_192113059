@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DataTransactionLayer;
+using Model;
 namespace Barış_Karakulak_192113059.OgrenciIslemleri
 {
     public partial class ogrEkle : Form
@@ -43,6 +44,19 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private void closelabel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_ogr_ekle_Click(object sender, EventArgs e)
+        {
+            string ogr_name = txt_ogr_ad.Text;
+            string ogr_surname = txt_ogr_soyad.Text;
+            Boolean ogr_sex = radio_erkek.Checked ? true : false;
+            Student student = new Student(ogr_name,ogr_surname,ogr_sex);   
+            StudentContext studentcontext = new StudentContext();
+            Tuple<bool, string> response;
+            
+            response= studentcontext.InsertStudentContext(student);
+            MessageBox.Show(response.Item2, response.Item1.ToString());
         }
     }
 }

@@ -16,6 +16,13 @@ namespace Model
             this.surname = surname;
             this.sex = sex;
         }
+        public Student(string name, string surname, bool sex)
+        {
+            
+            this.name = name;
+            this.surname = surname;
+            this.sex = sex;
+        }
         public Student()
         {
             name = null;

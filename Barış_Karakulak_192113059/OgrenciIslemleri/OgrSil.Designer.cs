@@ -29,18 +29,18 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btn_sil = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_aranan_deger = new MetroFramework.Controls.MetroTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_id = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_soyad = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_ad = new MetroFramework.Controls.MetroRadioButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btn_ara = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,14 +49,15 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btn_sil
             // 
-            this.metroButton1.Location = new System.Drawing.Point(10, 360);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(96, 23);
-            this.metroButton1.TabIndex = 10;
-            this.metroButton1.Text = "Öğrenci Sil";
-            this.metroButton1.UseSelectable = true;
+            this.btn_sil.Location = new System.Drawing.Point(10, 360);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(96, 23);
+            this.btn_sil.TabIndex = 10;
+            this.btn_sil.Text = "Öğrenci Sil";
+            this.btn_sil.UseSelectable = true;
+            this.btn_sil.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroGrid1
             // 
@@ -65,79 +66,82 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle8;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Location = new System.Drawing.Point(10, 184);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.metroGrid1.RowHeadersWidth = 51;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(576, 170);
             this.metroGrid1.TabIndex = 11;
+            this.metroGrid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellClick);
             // 
-            // metroTextBox1
+            // txt_aranan_deger
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(153, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(6, 86);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(175, 23);
-            this.metroTextBox1.TabIndex = 2;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_aranan_deger.CustomButton.Image = null;
+            this.txt_aranan_deger.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.txt_aranan_deger.CustomButton.Name = "";
+            this.txt_aranan_deger.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_aranan_deger.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_aranan_deger.CustomButton.TabIndex = 1;
+            this.txt_aranan_deger.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_aranan_deger.CustomButton.UseSelectable = true;
+            this.txt_aranan_deger.CustomButton.Visible = false;
+            this.txt_aranan_deger.Lines = new string[0];
+            this.txt_aranan_deger.Location = new System.Drawing.Point(6, 86);
+            this.txt_aranan_deger.MaxLength = 32767;
+            this.txt_aranan_deger.Name = "txt_aranan_deger";
+            this.txt_aranan_deger.PasswordChar = '\0';
+            this.txt_aranan_deger.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_aranan_deger.SelectedText = "";
+            this.txt_aranan_deger.SelectionLength = 0;
+            this.txt_aranan_deger.SelectionStart = 0;
+            this.txt_aranan_deger.ShortcutsEnabled = true;
+            this.txt_aranan_deger.Size = new System.Drawing.Size(175, 23);
+            this.txt_aranan_deger.TabIndex = 2;
+            this.txt_aranan_deger.UseSelectable = true;
+            this.txt_aranan_deger.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_aranan_deger.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_aranan_deger.TextChanged += new System.EventHandler(this.txt_aranan_deger_TextChanged);
+            this.txt_aranan_deger.Click += new System.EventHandler(this.txt_aranan_deger_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.metroRadioButton3);
-            this.groupBox2.Controls.Add(this.metroRadioButton2);
-            this.groupBox2.Controls.Add(this.metroRadioButton1);
+            this.groupBox2.Controls.Add(this.radio_ogr_id);
+            this.groupBox2.Controls.Add(this.radio_ogr_soyad);
+            this.groupBox2.Controls.Add(this.radio_ogr_ad);
             this.groupBox2.Location = new System.Drawing.Point(420, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(146, 99);
@@ -145,38 +149,39 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Göre Ara";
             // 
-            // metroRadioButton1
+            // radio_ogr_id
             // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(3, 21);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(83, 17);
-            this.metroRadioButton1.TabIndex = 0;
-            this.metroRadioButton1.Text = "Ad\'a Göre";
-            this.metroRadioButton1.UseCustomBackColor = true;
-            this.metroRadioButton1.UseSelectable = true;
+            this.radio_ogr_id.AutoSize = true;
+            this.radio_ogr_id.Location = new System.Drawing.Point(3, 66);
+            this.radio_ogr_id.Name = "radio_ogr_id";
+            this.radio_ogr_id.Size = new System.Drawing.Size(84, 17);
+            this.radio_ogr_id.TabIndex = 2;
+            this.radio_ogr_id.Text = "Id\'ye Göre";
+            this.radio_ogr_id.UseCustomBackColor = true;
+            this.radio_ogr_id.UseSelectable = true;
             // 
-            // metroRadioButton2
+            // radio_ogr_soyad
             // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(3, 44);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(103, 17);
-            this.metroRadioButton2.TabIndex = 1;
-            this.metroRadioButton2.Text = "Soyad\'a Göre";
-            this.metroRadioButton2.UseCustomBackColor = true;
-            this.metroRadioButton2.UseSelectable = true;
+            this.radio_ogr_soyad.AutoSize = true;
+            this.radio_ogr_soyad.Location = new System.Drawing.Point(3, 44);
+            this.radio_ogr_soyad.Name = "radio_ogr_soyad";
+            this.radio_ogr_soyad.Size = new System.Drawing.Size(103, 17);
+            this.radio_ogr_soyad.TabIndex = 1;
+            this.radio_ogr_soyad.Text = "Soyad\'a Göre";
+            this.radio_ogr_soyad.UseCustomBackColor = true;
+            this.radio_ogr_soyad.UseSelectable = true;
             // 
-            // metroRadioButton3
+            // radio_ogr_ad
             // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(3, 66);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(84, 17);
-            this.metroRadioButton3.TabIndex = 2;
-            this.metroRadioButton3.Text = "Id\'ye Göre";
-            this.metroRadioButton3.UseCustomBackColor = true;
-            this.metroRadioButton3.UseSelectable = true;
+            this.radio_ogr_ad.AutoSize = true;
+            this.radio_ogr_ad.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.radio_ogr_ad.Location = new System.Drawing.Point(3, 21);
+            this.radio_ogr_ad.Name = "radio_ogr_ad";
+            this.radio_ogr_ad.Size = new System.Drawing.Size(83, 17);
+            this.radio_ogr_ad.TabIndex = 0;
+            this.radio_ogr_ad.Text = "Ad\'a Göre";
+            this.radio_ogr_ad.UseCustomBackColor = true;
+            this.radio_ogr_ad.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -188,22 +193,22 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroLabel1.Text = "Aranan Değer";
             this.metroLabel1.UseCustomBackColor = true;
             // 
-            // metroButton2
+            // btn_ara
             // 
-            this.metroButton2.Location = new System.Drawing.Point(187, 86);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(227, 23);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Ara";
-            this.metroButton2.UseSelectable = true;
-            
+            this.btn_ara.Location = new System.Drawing.Point(187, 86);
+            this.btn_ara.Name = "btn_ara";
+            this.btn_ara.Size = new System.Drawing.Size(227, 23);
+            this.btn_ara.TabIndex = 4;
+            this.btn_ara.Text = "Ara";
+            this.btn_ara.UseSelectable = true;
+            this.btn_ara.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroButton2);
+            this.groupBox1.Controls.Add(this.btn_ara);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.metroTextBox1);
+            this.groupBox1.Controls.Add(this.txt_aranan_deger);
             this.groupBox1.Location = new System.Drawing.Point(10, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(576, 119);
@@ -244,7 +249,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.Controls.Add(this.closelabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroGrid1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btn_sil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OgrSil";
             this.Text = "OgrSil";
@@ -260,15 +265,15 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btn_sil;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txt_aranan_deger;
         private System.Windows.Forms.GroupBox groupBox2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_id;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_soyad;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_ad;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btn_ara;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroLabel closelabel;
         private System.Windows.Forms.Panel panel1;
