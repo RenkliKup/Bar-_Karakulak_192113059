@@ -37,7 +37,7 @@ namespace Barış_Karakulak_192113059
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            label1.Text = (DateTime.Now- new DateTime(2023, 3, 2)).TotalDays.ToString();
             StudentContext student = new StudentContext();
             BookContext book = new BookContext();
             txt_ogr_sayi.Text = student.GetStudents().Count().ToString();
