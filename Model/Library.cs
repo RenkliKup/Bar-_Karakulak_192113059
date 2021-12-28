@@ -24,5 +24,15 @@ namespace Model
             this.expiryDate = expiryDate;
             this.isDelivered = isDelivered;
         }
+        public Library(Student student, Book book)
+        {
+            this.student = student;
+            this.book = book;
+        }
+        public Library()
+        {
+            this.student = student;
+            this.book = book;
+        }
     }
 }

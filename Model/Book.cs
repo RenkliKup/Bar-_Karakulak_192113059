@@ -22,6 +22,13 @@ namespace Model
             this.author = author;
             this.page = page;
         }
+        public Book(string name, string type, string author, int page)
+        {
+            this.name = name;
+            this.type = type;
+            this.author = author;
+            this.page = page;
+        }
         public Book()
         {
             this.name = null;

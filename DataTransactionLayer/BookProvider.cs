@@ -20,8 +20,8 @@ namespace DataTransactionLayer
                     conn.Open();
                     OleDbCommand cmd = new SqlConnection().
                         cmd(
-                        $"INSERT INTO Books VALUES({book.name}," +
-                        $"{book.type},{book.author},{book.page})"
+                        $"INSERT INTO Books(Book_name,Book_type,Book_author,Book_page) VALUES('{book.name}'," +
+                        $"'{book.type}','{book.author}',{book.page})"
                         , conn
                         );
                     if (cmd.ExecuteNonQuery() != -1)
@@ -197,8 +197,9 @@ namespace DataTransactionLayer
             }
         }
         #endregion
-        #region AdaGoreListele
-        public List<Book> AdaGoreListele()
+       
+        #region GoreAra
+        public List<Book> GoreAra(string arananDeger, string satirAdi)
         {
             List<Book> books = new List<Book>();
             using (OleDbConnection conn = new SqlConnection().Conn())
@@ -206,7 +207,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd("SELECT * FROM Books WHERE Book_name LIKE '%or%'", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Books WHERE {satirAdi} LIKE '%{arananDeger}%'", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {
@@ -233,5 +234,6 @@ namespace DataTransactionLayer
             }
         }
         #endregion
+
     }
 }

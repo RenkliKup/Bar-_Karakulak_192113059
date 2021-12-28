@@ -36,8 +36,10 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroRadioButton8 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton7 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton6 = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_borc = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
@@ -45,7 +47,6 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.btn_ara = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.radio_ogr_id = new MetroFramework.Controls.MetroRadioButton();
             this.radio_ogr_soyad = new MetroFramework.Controls.MetroRadioButton();
             this.radio_ogr_ad = new MetroFramework.Controls.MetroRadioButton();
             this.txt_aranan_deger = new MetroFramework.Controls.MetroTextBox();
@@ -53,8 +54,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.btn_listele = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.label1 = new System.Windows.Forms.Label();
-            this.radio_borc = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton8 = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ogr_id = new MetroFramework.Controls.MetroRadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox24.SuspendLayout();
@@ -76,6 +76,16 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Göre Listele";
             // 
+            // metroRadioButton8
+            // 
+            this.metroRadioButton8.Location = new System.Drawing.Point(6, 93);
+            this.metroRadioButton8.Name = "metroRadioButton8";
+            this.metroRadioButton8.Size = new System.Drawing.Size(149, 16);
+            this.metroRadioButton8.TabIndex = 4;
+            this.metroRadioButton8.Text = "Kitapsız Olanlar";
+            this.metroRadioButton8.UseCustomBackColor = true;
+            this.metroRadioButton8.UseSelectable = true;
+            // 
             // metroRadioButton7
             // 
             this.metroRadioButton7.Location = new System.Drawing.Point(6, 70);
@@ -95,6 +105,16 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.metroRadioButton6.Text = "Sadece Erkekler";
             this.metroRadioButton6.UseCustomBackColor = true;
             this.metroRadioButton6.UseSelectable = true;
+            // 
+            // radio_borc
+            // 
+            this.radio_borc.Location = new System.Drawing.Point(6, 24);
+            this.radio_borc.Name = "radio_borc";
+            this.radio_borc.Size = new System.Drawing.Size(149, 17);
+            this.radio_borc.TabIndex = 1;
+            this.radio_borc.Text = "Borcu Olanlar";
+            this.radio_borc.UseCustomBackColor = true;
+            this.radio_borc.UseSelectable = true;
             // 
             // metroRadioButton4
             // 
@@ -171,17 +191,6 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.groupBox24.TabIndex = 3;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Göre Ara";
-            // 
-            // radio_ogr_id
-            // 
-            this.radio_ogr_id.AutoSize = true;
-            this.radio_ogr_id.Location = new System.Drawing.Point(3, 66);
-            this.radio_ogr_id.Name = "radio_ogr_id";
-            this.radio_ogr_id.Size = new System.Drawing.Size(106, 17);
-            this.radio_ogr_id.TabIndex = 2;
-            this.radio_ogr_id.Text = "id\'ye gore ara";
-            this.radio_ogr_id.UseCustomBackColor = true;
-            this.radio_ogr_id.UseSelectable = true;
             // 
             // radio_ogr_soyad
             // 
@@ -344,25 +353,16 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.label1.TabIndex = 35;
             this.label1.Text = "Ödünç Aldığı Kitaplar";
             // 
-            // radio_borc
+            // radio_ogr_id
             // 
-            this.radio_borc.Location = new System.Drawing.Point(6, 24);
-            this.radio_borc.Name = "radio_borc";
-            this.radio_borc.Size = new System.Drawing.Size(149, 17);
-            this.radio_borc.TabIndex = 1;
-            this.radio_borc.Text = "Borcu Olanlar";
-            this.radio_borc.UseCustomBackColor = true;
-            this.radio_borc.UseSelectable = true;
-            // 
-            // metroRadioButton8
-            // 
-            this.metroRadioButton8.Location = new System.Drawing.Point(6, 93);
-            this.metroRadioButton8.Name = "metroRadioButton8";
-            this.metroRadioButton8.Size = new System.Drawing.Size(149, 16);
-            this.metroRadioButton8.TabIndex = 4;
-            this.metroRadioButton8.Text = "Kitapsız Olanlar";
-            this.metroRadioButton8.UseCustomBackColor = true;
-            this.metroRadioButton8.UseSelectable = true;
+            this.radio_ogr_id.AutoSize = true;
+            this.radio_ogr_id.Location = new System.Drawing.Point(3, 66);
+            this.radio_ogr_id.Name = "radio_ogr_id";
+            this.radio_ogr_id.Size = new System.Drawing.Size(106, 17);
+            this.radio_ogr_id.TabIndex = 2;
+            this.radio_ogr_id.Text = "id\'ye gore ara";
+            this.radio_ogr_id.UseCustomBackColor = true;
+            this.radio_ogr_id.UseSelectable = true;
             // 
             // ogrListele
             // 
@@ -407,7 +407,6 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private MetroFramework.Controls.MetroButton btn_ara;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.GroupBox groupBox24;
-        private MetroFramework.Controls.MetroRadioButton radio_ogr_id;
         private MetroFramework.Controls.MetroRadioButton radio_ogr_soyad;
         private MetroFramework.Controls.MetroRadioButton radio_ogr_ad;
         private MetroFramework.Controls.MetroTextBox txt_aranan_deger;
@@ -417,5 +416,6 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton8;
         private MetroFramework.Controls.MetroRadioButton radio_borc;
+        private MetroFramework.Controls.MetroRadioButton radio_ogr_id;
     }
 }

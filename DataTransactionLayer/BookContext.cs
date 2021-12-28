@@ -29,6 +29,9 @@ namespace DataTransactionLayer
         {
             return bookProvider.ReadBook();
         }
-
+        public List<Book> GoreAra(string arananDeger,string satirAdi)
+        {
+            return bookProvider.GoreAra(arananDeger,satirAdi);
+        }
     }
 }
