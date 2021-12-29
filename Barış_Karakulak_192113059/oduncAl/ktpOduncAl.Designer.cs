@@ -29,55 +29,56 @@ namespace Barış_Karakulak_192113059.oduncAl
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_odunc_al = new System.Windows.Forms.Button();
+            this.grid_listele = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grid_odunc_alinan_ktp = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_ara = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.radio_id_gore = new MetroFramework.Controls.MetroRadioButton();
             this.radio_yazar_gore = new MetroFramework.Controls.MetroRadioButton();
             this.radio_ad_gore = new MetroFramework.Controls.MetroRadioButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_aranan_deger = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_soyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_adi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.closelabel = new MetroFramework.Controls.MetroLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_listele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_odunc_alinan_ktp)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_odunc_al
             // 
-            this.button2.Location = new System.Drawing.Point(5, 371);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Ödünç Al";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_odunc_al.Location = new System.Drawing.Point(5, 371);
+            this.btn_odunc_al.Name = "btn_odunc_al";
+            this.btn_odunc_al.Size = new System.Drawing.Size(75, 23);
+            this.btn_odunc_al.TabIndex = 51;
+            this.btn_odunc_al.Text = "Ödünç Al";
+            this.btn_odunc_al.UseVisualStyleBackColor = true;
+            this.btn_odunc_al.Click += new System.EventHandler(this.btn_odunc_al_Click);
             // 
-            // dataGridView2
+            // grid_listele
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Teal;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 187);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(410, 178);
-            this.dataGridView2.TabIndex = 50;
+            this.grid_listele.BackgroundColor = System.Drawing.Color.Teal;
+            this.grid_listele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_listele.Location = new System.Drawing.Point(5, 187);
+            this.grid_listele.Name = "grid_listele";
+            this.grid_listele.RowHeadersWidth = 51;
+            this.grid_listele.RowTemplate.Height = 24;
+            this.grid_listele.Size = new System.Drawing.Size(410, 178);
+            this.grid_listele.TabIndex = 50;
+            this.grid_listele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_listele_CellClick);
             // 
             // label2
             // 
@@ -88,16 +89,16 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.label2.TabIndex = 49;
             this.label2.Text = "Aranan Kitaplar";
             // 
-            // dataGridView1
+            // grid_odunc_alinan_ktp
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Teal;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(421, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 178);
-            this.dataGridView1.TabIndex = 48;
+            this.grid_odunc_alinan_ktp.BackgroundColor = System.Drawing.Color.Teal;
+            this.grid_odunc_alinan_ktp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_odunc_alinan_ktp.Location = new System.Drawing.Point(421, 187);
+            this.grid_odunc_alinan_ktp.Name = "grid_odunc_alinan_ktp";
+            this.grid_odunc_alinan_ktp.RowHeadersWidth = 51;
+            this.grid_odunc_alinan_ktp.RowTemplate.Height = 24;
+            this.grid_odunc_alinan_ktp.Size = new System.Drawing.Size(525, 178);
+            this.grid_odunc_alinan_ktp.TabIndex = 48;
             // 
             // label1
             // 
@@ -113,7 +114,7 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.groupBox3.Controls.Add(this.btn_ara);
             this.groupBox3.Controls.Add(this.metroLabel1);
             this.groupBox3.Controls.Add(this.groupBox24);
-            this.groupBox3.Controls.Add(this.metroTextBox1);
+            this.groupBox3.Controls.Add(this.txt_aranan_deger);
             this.groupBox3.Location = new System.Drawing.Point(427, 45);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(521, 119);
@@ -129,6 +130,7 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.btn_ara.TabIndex = 4;
             this.btn_ara.Text = "Ara";
             this.btn_ara.UseSelectable = true;
+            this.btn_ara.Click += new System.EventHandler(this.btn_ara_Click);
             // 
             // metroLabel1
             // 
@@ -142,7 +144,6 @@ namespace Barış_Karakulak_192113059.oduncAl
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.radio_id_gore);
             this.groupBox24.Controls.Add(this.radio_yazar_gore);
             this.groupBox24.Controls.Add(this.radio_ad_gore);
             this.groupBox24.Location = new System.Drawing.Point(366, 10);
@@ -151,17 +152,6 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.groupBox24.TabIndex = 3;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Göre Ara";
-            // 
-            // radio_id_gore
-            // 
-            this.radio_id_gore.AutoSize = true;
-            this.radio_id_gore.Location = new System.Drawing.Point(3, 66);
-            this.radio_id_gore.Name = "radio_id_gore";
-            this.radio_id_gore.Size = new System.Drawing.Size(84, 17);
-            this.radio_id_gore.TabIndex = 2;
-            this.radio_id_gore.Text = "Id\'ye Göre";
-            this.radio_id_gore.UseCustomBackColor = true;
-            this.radio_id_gore.UseSelectable = true;
             // 
             // radio_yazar_gore
             // 
@@ -185,44 +175,45 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.radio_ad_gore.UseCustomBackColor = true;
             this.radio_ad_gore.UseSelectable = true;
             // 
-            // metroTextBox1
+            // txt_aranan_deger
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(153, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(6, 85);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(175, 23);
-            this.metroTextBox1.TabIndex = 2;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_aranan_deger.CustomButton.Image = null;
+            this.txt_aranan_deger.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.txt_aranan_deger.CustomButton.Name = "";
+            this.txt_aranan_deger.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_aranan_deger.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_aranan_deger.CustomButton.TabIndex = 1;
+            this.txt_aranan_deger.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_aranan_deger.CustomButton.UseSelectable = true;
+            this.txt_aranan_deger.CustomButton.Visible = false;
+            this.txt_aranan_deger.Lines = new string[0];
+            this.txt_aranan_deger.Location = new System.Drawing.Point(6, 85);
+            this.txt_aranan_deger.MaxLength = 32767;
+            this.txt_aranan_deger.Name = "txt_aranan_deger";
+            this.txt_aranan_deger.PasswordChar = '\0';
+            this.txt_aranan_deger.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_aranan_deger.SelectedText = "";
+            this.txt_aranan_deger.SelectionLength = 0;
+            this.txt_aranan_deger.SelectionStart = 0;
+            this.txt_aranan_deger.ShortcutsEnabled = true;
+            this.txt_aranan_deger.Size = new System.Drawing.Size(175, 23);
+            this.txt_aranan_deger.TabIndex = 2;
+            this.txt_aranan_deger.UseSelectable = true;
+            this.txt_aranan_deger.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_aranan_deger.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_aranan_deger.TextChanged += new System.EventHandler(this.txt_aranan_deger_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_id);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_soyad);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_adi);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(5, 45);
             this.groupBox1.Name = "groupBox1";
@@ -231,12 +222,12 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Seç";
             // 
-            // textBox3
+            // txt_id
             // 
-            this.textBox3.Location = new System.Drawing.Point(282, 53);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 22);
-            this.textBox3.TabIndex = 47;
+            this.txt_id.Location = new System.Drawing.Point(282, 53);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(122, 22);
+            this.txt_id.TabIndex = 47;
             // 
             // label5
             // 
@@ -256,12 +247,12 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.button1.Text = "Öğrenci Seç";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txt_soyad
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 22);
-            this.textBox2.TabIndex = 45;
+            this.txt_soyad.Location = new System.Drawing.Point(144, 53);
+            this.txt_soyad.Name = "txt_soyad";
+            this.txt_soyad.Size = new System.Drawing.Size(129, 22);
+            this.txt_soyad.TabIndex = 45;
             // 
             // label4
             // 
@@ -272,12 +263,12 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.label4.TabIndex = 44;
             this.label4.Text = "Öğrenci Soyadı:";
             // 
-            // textBox1
+            // txt_adi
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 22);
-            this.textBox1.TabIndex = 43;
+            this.txt_adi.Location = new System.Drawing.Point(9, 53);
+            this.txt_adi.Name = "txt_adi";
+            this.txt_adi.Size = new System.Drawing.Size(129, 22);
+            this.txt_adi.TabIndex = 43;
             // 
             // label3
             // 
@@ -316,10 +307,10 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(961, 421);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.btn_odunc_al);
+            this.Controls.Add(this.grid_listele);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grid_odunc_alinan_ktp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -329,8 +320,8 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.Name = "ktpOduncAl";
             this.Text = "ktpOduncAl";
             this.Load += new System.EventHandler(this.ktpOduncAl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_listele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_odunc_alinan_ktp)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox24.ResumeLayout(false);
@@ -344,26 +335,25 @@ namespace Barış_Karakulak_192113059.oduncAl
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_odunc_al;
+        private System.Windows.Forms.DataGridView grid_listele;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grid_odunc_alinan_ktp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private MetroFramework.Controls.MetroButton btn_ara;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.GroupBox groupBox24;
-        private MetroFramework.Controls.MetroRadioButton radio_id_gore;
         private MetroFramework.Controls.MetroRadioButton radio_yazar_gore;
         private MetroFramework.Controls.MetroRadioButton radio_ad_gore;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txt_aranan_deger;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_soyad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_adi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel closelabel;
