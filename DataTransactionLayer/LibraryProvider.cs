@@ -8,7 +8,7 @@ using System.Data.OleDb;
 using Model;
 namespace DataTransactionLayer
 {
-    class LibraryProvider
+   public class LibraryProvider
     {
         #region Library Insert
         public Tuple<Boolean, string> InsertLibrary(int bookId, int studentId)
@@ -202,7 +202,7 @@ namespace DataTransactionLayer
 
 
         }
-        public List<Student> OduncAldigiOgrenciler(int ogrId)
+        public List<Student> OduncAldigiOgrenciler(int ktpId)
         {
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
@@ -212,7 +212,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Students.* FROM Library INNER JOIN Students ON Library.Student_id=Students.Student_id WHERE Students.Student_id={ogrId}", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Students.* FROM Library INNER JOIN Students ON Library.Student_id=Students.Student_id WHERE Library.Book_id={ktpId}", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {
@@ -240,7 +240,7 @@ namespace DataTransactionLayer
 
             }
         }
-        public List<Book> OduncAldigiKitaplar(int ktpId)
+        public List<Book> OduncAldigiKitaplar(int ogrId)
         {
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
@@ -250,7 +250,126 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id WHERE Books.Book_id={ktpId}", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id WHERE Library.Student_id={ogrId}", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        books.Add(
+                             new Book(
+                            read.GetInt32(0),
+                            read.GetString(1),
+                            read.GetString(2),
+                            read.GetString(3),
+                            read.GetInt32(4)
+                                 )
+                             );
+
+                    }
+                    read.Close();
+                    return books;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+        public List<Library> BorcuOlanlar()
+        {
+            StudentContext studentContext = new StudentContext();
+            BookContext bookContext = new BookContext();
+            List<Library> librarys = new List<Library>();
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd("SELECT * FROM Library Where debt>0", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        librarys.Add(
+                            new Library(
+                                read.GetInt16(0),
+                               studentContext.getOneStudent(read.GetInt16(1)).Item3,
+                               bookContext.getOneBook(read.GetInt16(2)).Item3,
+                               read.GetDateTime(3),
+                               read.GetDateTime(4),
+
+                               read.GetDecimal(5),
+                               read.GetBoolean(6)
+                                )
+                            );
+                    }
+                    read.Close();
+                    return librarys;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+        public List<Book> AlinmisKitaplar()
+        {
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                BookContext bookContext = new BookContext();
+
+                List<Book> books = new List<Book>();
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    while (read.Read())
+                    {
+                        books.Add(
+                             new Book(
+                            read.GetInt32(0),
+                            read.GetString(1),
+                            read.GetString(2),
+                            read.GetString(3),
+                            read.GetInt32(4)
+                                 )
+                             );
+
+                    }
+                    read.Close();
+                    return books;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
+        public List<Book> AlinmamisKitaplar()
+        {
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                BookContext bookContext = new BookContext();
+
+                List<Book> books = new List<Book>();
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library RIGHT JOIN Books ON Library.Book_id=Books.Book_id Where Library.Book_id IS NULL", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {

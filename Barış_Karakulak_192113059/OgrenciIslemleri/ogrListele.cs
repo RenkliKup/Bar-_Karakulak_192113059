@@ -21,6 +21,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
         private void ogrListele_Load(object sender, EventArgs e)
         {
             radio_ogr_ad.Checked = true;
+            radio_borc.Checked = true;
             data_grid_listele.DataSource = StudentContext.GetStudents();
             
         }
@@ -59,14 +60,53 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             }
         }
 
-        private void data_grid_listele_CellClick(object sender, DataGridViewCellEventArgs e)
+       
+
+
+        LibraryContext LibraryContext = new LibraryContext();
+        private void btn_listele_Click_1(object sender, EventArgs e)
         {
-        // yapılacak
+             if(radio_borc.Checked)
+                {
+                data_grid_listele.DataSource = LibraryContext.BorcuOlanlar();
+                }
+             else if(radio_erkek.Checked)
+            {
+                data_grid_listele.DataSource = StudentContext.GoreListele("Student_sex", true);
+
+            }
+
+            else
+            {
+                data_grid_listele.DataSource = StudentContext.GoreListele("Student_sex",false);
+
+            }
         }
 
-        private void btn_listele_Click(object sender, EventArgs e)
+        private void txt_aranan_deger_TextChanged(object sender, EventArgs e)
         {
+            if(txt_aranan_deger.Text=="")
+            {
+                data_grid_listele.DataSource = StudentContext.GetStudents();
 
+            }
+        }
+
+        private void data_grid_listele_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (data_grid_listele.SelectedRows[0].Cells.Count <= 4)
+                {
+                    int secilen_id = int.Parse(data_grid_listele.SelectedRows[0].Cells[0].Value.ToString());
+                    grid_odunc_aldigi_ktp.DataSource = LibraryContext.OduncAldigiKitaplar(secilen_id);
+                }
+            }
+            catch(Exception s)
+            {
+                
+                grid_odunc_aldigi_ktp.DataSource = null;
+            }
         }
     }
 }

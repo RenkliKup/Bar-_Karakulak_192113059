@@ -51,12 +51,12 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.radio_alinmis_ktp = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton4 = new MetroFramework.Controls.MetroRadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.grid_odunc_aldigi_ogr = new MetroFramework.Controls.MetroGrid();
             this.groupBox1.SuspendLayout();
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_listele)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_odunc_aldigi_ogr)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -222,6 +222,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.grid_listele.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_listele.Size = new System.Drawing.Size(576, 170);
             this.grid_listele.TabIndex = 35;
+            this.grid_listele.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_listele_CellClick);
             // 
             // btn_listele
             // 
@@ -231,6 +232,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.btn_listele.TabIndex = 34;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseSelectable = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // groupBox3
             // 
@@ -282,13 +284,13 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.label1.TabIndex = 39;
             this.label1.Text = "Ödünç Aldığı Öğrenciler ";
             // 
-            // metroGrid2
+            // grid_odunc_aldigi_ogr
             // 
-            this.metroGrid2.AllowUserToResizeRows = false;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid_odunc_aldigi_ogr.AllowUserToResizeRows = false;
+            this.grid_odunc_aldigi_ogr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grid_odunc_aldigi_ogr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid_odunc_aldigi_ogr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grid_odunc_aldigi_ogr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -296,8 +298,8 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_odunc_aldigi_ogr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grid_odunc_aldigi_ogr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -305,13 +307,13 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.metroGrid2.EnableHeadersVisualStyles = false;
-            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.Location = new System.Drawing.Point(591, 173);
-            this.metroGrid2.Name = "metroGrid2";
-            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid_odunc_aldigi_ogr.DefaultCellStyle = dataGridViewCellStyle5;
+            this.grid_odunc_aldigi_ogr.EnableHeadersVisualStyles = false;
+            this.grid_odunc_aldigi_ogr.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.grid_odunc_aldigi_ogr.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grid_odunc_aldigi_ogr.Location = new System.Drawing.Point(591, 173);
+            this.grid_odunc_aldigi_ogr.Name = "grid_odunc_aldigi_ogr";
+            this.grid_odunc_aldigi_ogr.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -319,13 +321,13 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.metroGrid2.RowHeadersWidth = 51;
-            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid2.RowTemplate.Height = 24;
-            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(485, 170);
-            this.metroGrid2.TabIndex = 40;
+            this.grid_odunc_aldigi_ogr.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.grid_odunc_aldigi_ogr.RowHeadersWidth = 51;
+            this.grid_odunc_aldigi_ogr.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grid_odunc_aldigi_ogr.RowTemplate.Height = 24;
+            this.grid_odunc_aldigi_ogr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid_odunc_aldigi_ogr.Size = new System.Drawing.Size(485, 170);
+            this.grid_odunc_aldigi_ogr.TabIndex = 40;
             // 
             // ktpListele
             // 
@@ -333,7 +335,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1088, 393);
-            this.Controls.Add(this.metroGrid2);
+            this.Controls.Add(this.grid_odunc_aldigi_ogr);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
@@ -352,7 +354,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             ((System.ComponentModel.ISupportInitialize)(this.grid_listele)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_odunc_aldigi_ogr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,6 +377,6 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
         private MetroFramework.Controls.MetroRadioButton radio_alinmis_ktp;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton4;
         private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroGrid metroGrid2;
+        private MetroFramework.Controls.MetroGrid grid_odunc_aldigi_ogr;
     }
 }

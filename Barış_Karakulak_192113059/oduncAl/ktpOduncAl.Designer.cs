@@ -35,12 +35,12 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btn_ara = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_id_gore = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_yazar_gore = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_ad_gore = new MetroFramework.Controls.MetroRadioButton();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -110,7 +110,7 @@ namespace Barış_Karakulak_192113059.oduncAl
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.metroButton2);
+            this.groupBox3.Controls.Add(this.btn_ara);
             this.groupBox3.Controls.Add(this.metroLabel1);
             this.groupBox3.Controls.Add(this.groupBox24);
             this.groupBox3.Controls.Add(this.metroTextBox1);
@@ -121,14 +121,14 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kitap Ara";
             // 
-            // metroButton2
+            // btn_ara
             // 
-            this.metroButton2.Location = new System.Drawing.Point(188, 85);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(175, 23);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "Ara";
-            this.metroButton2.UseSelectable = true;
+            this.btn_ara.Location = new System.Drawing.Point(188, 85);
+            this.btn_ara.Name = "btn_ara";
+            this.btn_ara.Size = new System.Drawing.Size(175, 23);
+            this.btn_ara.TabIndex = 4;
+            this.btn_ara.Text = "Ara";
+            this.btn_ara.UseSelectable = true;
             // 
             // metroLabel1
             // 
@@ -142,9 +142,9 @@ namespace Barış_Karakulak_192113059.oduncAl
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.metroRadioButton3);
-            this.groupBox24.Controls.Add(this.metroRadioButton2);
-            this.groupBox24.Controls.Add(this.metroRadioButton1);
+            this.groupBox24.Controls.Add(this.radio_id_gore);
+            this.groupBox24.Controls.Add(this.radio_yazar_gore);
+            this.groupBox24.Controls.Add(this.radio_ad_gore);
             this.groupBox24.Location = new System.Drawing.Point(366, 10);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(146, 99);
@@ -152,38 +152,38 @@ namespace Barış_Karakulak_192113059.oduncAl
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Göre Ara";
             // 
-            // metroRadioButton3
+            // radio_id_gore
             // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(3, 66);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(84, 17);
-            this.metroRadioButton3.TabIndex = 2;
-            this.metroRadioButton3.Text = "Id\'ye Göre";
-            this.metroRadioButton3.UseCustomBackColor = true;
-            this.metroRadioButton3.UseSelectable = true;
+            this.radio_id_gore.AutoSize = true;
+            this.radio_id_gore.Location = new System.Drawing.Point(3, 66);
+            this.radio_id_gore.Name = "radio_id_gore";
+            this.radio_id_gore.Size = new System.Drawing.Size(84, 17);
+            this.radio_id_gore.TabIndex = 2;
+            this.radio_id_gore.Text = "Id\'ye Göre";
+            this.radio_id_gore.UseCustomBackColor = true;
+            this.radio_id_gore.UseSelectable = true;
             // 
-            // metroRadioButton2
+            // radio_yazar_gore
             // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(3, 44);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(98, 17);
-            this.metroRadioButton2.TabIndex = 1;
-            this.metroRadioButton2.Text = "Yazar\'a Göre";
-            this.metroRadioButton2.UseCustomBackColor = true;
-            this.metroRadioButton2.UseSelectable = true;
+            this.radio_yazar_gore.AutoSize = true;
+            this.radio_yazar_gore.Location = new System.Drawing.Point(3, 44);
+            this.radio_yazar_gore.Name = "radio_yazar_gore";
+            this.radio_yazar_gore.Size = new System.Drawing.Size(98, 17);
+            this.radio_yazar_gore.TabIndex = 1;
+            this.radio_yazar_gore.Text = "Yazar\'a Göre";
+            this.radio_yazar_gore.UseCustomBackColor = true;
+            this.radio_yazar_gore.UseSelectable = true;
             // 
-            // metroRadioButton1
+            // radio_ad_gore
             // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(3, 21);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(83, 17);
-            this.metroRadioButton1.TabIndex = 0;
-            this.metroRadioButton1.Text = "Ad\'a Göre";
-            this.metroRadioButton1.UseCustomBackColor = true;
-            this.metroRadioButton1.UseSelectable = true;
+            this.radio_ad_gore.AutoSize = true;
+            this.radio_ad_gore.Location = new System.Drawing.Point(3, 21);
+            this.radio_ad_gore.Name = "radio_ad_gore";
+            this.radio_ad_gore.Size = new System.Drawing.Size(83, 17);
+            this.radio_ad_gore.TabIndex = 0;
+            this.radio_ad_gore.Text = "Ad\'a Göre";
+            this.radio_ad_gore.UseCustomBackColor = true;
+            this.radio_ad_gore.UseSelectable = true;
             // 
             // metroTextBox1
             // 
@@ -350,12 +350,12 @@ namespace Barış_Karakulak_192113059.oduncAl
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btn_ara;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.GroupBox groupBox24;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
+        private MetroFramework.Controls.MetroRadioButton radio_id_gore;
+        private MetroFramework.Controls.MetroRadioButton radio_yazar_gore;
+        private MetroFramework.Controls.MetroRadioButton radio_ad_gore;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;

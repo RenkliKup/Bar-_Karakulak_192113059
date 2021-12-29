@@ -61,5 +61,31 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
             }
         }
+
+        private void grid_listele_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int ktpId =int.Parse(grid_listele.SelectedRows[0].Cells[0].Value.ToString());
+                grid_odunc_aldigi_ogr.DataSource= LibraryContext.OduncAldigiOgrenciler(ktpId);
+            }
+            catch
+            {
+                grid_odunc_aldigi_ogr.DataSource = null;
+            }
+        }
+        LibraryContext LibraryContext = new LibraryContext();
+        private void btn_listele_Click(object sender, EventArgs e)
+        {
+            if(radio_alinmamis_ktp.Checked)
+            {
+               grid_listele.DataSource= LibraryContext.AlinmamisKitaplar();
+            }
+            else
+            {
+                grid_listele.DataSource = LibraryContext.AlinmisKitaplar();
+
+            }
+        }
     }
 }
