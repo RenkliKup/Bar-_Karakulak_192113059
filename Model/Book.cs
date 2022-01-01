@@ -33,6 +33,9 @@ namespace Model
         {
             this.name = null;
         }
-
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

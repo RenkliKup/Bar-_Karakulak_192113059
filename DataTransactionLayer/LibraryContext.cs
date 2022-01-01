@@ -21,7 +21,7 @@ namespace DataTransactionLayer
         {
             return LibraryProvider.DebtUpdate(id, updateDebt);
         }
-        public List<Library> ReadLibrary()
+        public Tuple<List<Library>, bool> ReadLibrary()
         {
             return LibraryProvider.ReadLibrary();
         }
@@ -33,11 +33,11 @@ namespace DataTransactionLayer
         {
             return LibraryProvider.OduncAldigiOgrenciler(ktpId);
         }
-        public List<Book> OduncAldigiKitaplar(int ogrId)
+        public List<Library> OduncAldigiKitaplar(int ogrId,bool choose)
         {
-            return LibraryProvider.OduncAldigiKitaplar(ogrId);
+            return LibraryProvider.OduncAldigiKitaplar(ogrId,choose);
         }
-        public List<Library> BorcuOlanlar()
+        public List<Student> BorcuOlanlar()
         {
             return LibraryProvider.BorcuOlanlar();
         }
@@ -48,6 +48,22 @@ namespace DataTransactionLayer
         public List<Book> AlinmisKitaplar()
         {
             return LibraryProvider.AlinmisKitaplar();
+        }
+        public Tuple<Boolean, string> returnBook(int id)
+        {
+            return LibraryProvider.returnBook(id);
+        }
+        public List<Library> ReadOneLib(int ktpId)
+        {
+            return LibraryProvider.ReadOneLib(ktpId);
+        }
+        public List<Library> teslimEtigiKitaplar(int ogr_id)
+        {
+            return LibraryProvider.teslimEtigiKitaplar(ogr_id);
+        }
+        public List<Library> alinanKitaplar(int ogr_id)
+        {
+            return LibraryProvider.alinanKitaplar(ogr_id);
         }
     }
 }

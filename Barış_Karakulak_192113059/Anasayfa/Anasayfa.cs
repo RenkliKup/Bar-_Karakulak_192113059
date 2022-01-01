@@ -35,14 +35,17 @@ namespace Barış_Karakulak_192113059
 
             base.WndProc(ref m);
         }
+        LibraryContext LibraryContext = new LibraryContext();
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text = (DateTime.Now- new DateTime(2023, 3, 2)).TotalDays.ToString();
+            Tuple<bool, string> response;
+            response= LibraryContext.DebtUpdate();
+
             StudentContext student = new StudentContext();
             BookContext book = new BookContext();
             txt_ogr_sayi.Text = student.GetStudents().Count().ToString();
             txt_ktp_sayi.Text = book.GetBooks().Count().ToString();
-           
+            MessageBox.Show(response.Item2, response.Item1.ToString());
         }
 
         private void closelabel_Click(object sender, EventArgs e)

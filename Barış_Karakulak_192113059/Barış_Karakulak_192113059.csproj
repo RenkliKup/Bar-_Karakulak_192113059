@@ -90,6 +90,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="iadeEt\KtpBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iadeEt\KtpBilgi.Designer.cs">
+      <DependentUpon>KtpBilgi.cs</DependentUpon>
+    </Compile>
     <Compile Include="iadeEt\KtpIadeEt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Anasayfa\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iadeEt\KtpBilgi.resx">
+      <DependentUpon>KtpBilgi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="iadeEt\KtpIadeEt.resx">
       <DependentUpon>KtpIadeEt.cs</DependentUpon>

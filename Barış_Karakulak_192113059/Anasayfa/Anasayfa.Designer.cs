@@ -41,7 +41,6 @@ namespace Barış_Karakulak_192113059
             this.txt_ogr_sayi = new MetroFramework.Controls.MetroLabel();
             this.txt_ktp_sayi = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +131,7 @@ namespace Barış_Karakulak_192113059
             this.btn_odunc_al.Size = new System.Drawing.Size(428, 38);
             this.btn_odunc_al.Style = MetroFramework.MetroColorStyle.Blue;
             this.btn_odunc_al.TabIndex = 2;
-            this.btn_odunc_al.Text = "Ödünç Al";
+            this.btn_odunc_al.Text = "Ödünç Al/Süresini Uzat";
             this.btn_odunc_al.UseCustomBackColor = true;
             this.btn_odunc_al.UseCustomForeColor = true;
             this.btn_odunc_al.UseSelectable = true;
@@ -195,22 +194,12 @@ namespace Barış_Karakulak_192113059
             this.metroLabel6.Text = "Kitap Sayımız:";
             this.metroLabel6.UseCustomBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(339, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
-            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(452, 362);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_ktp_sayi);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.txt_ogr_sayi);
@@ -243,7 +232,6 @@ namespace Barış_Karakulak_192113059
         private MetroFramework.Controls.MetroButton btn_zedgrapgh;
         private MetroFramework.Controls.MetroLabel txt_ktp_sayi;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private System.Windows.Forms.Label label1;
     }
 }
 

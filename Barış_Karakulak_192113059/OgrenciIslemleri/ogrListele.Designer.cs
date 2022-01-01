@@ -118,7 +118,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Location = new System.Drawing.Point(6, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(580, 10);
+            this.panel1.Size = new System.Drawing.Size(1059, 10);
             this.panel1.TabIndex = 32;
             // 
             // closelabel
@@ -126,7 +126,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.closelabel.BackColor = System.Drawing.Color.Teal;
             this.closelabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.closelabel.ForeColor = System.Drawing.Color.Crimson;
-            this.closelabel.Location = new System.Drawing.Point(568, 2);
+            this.closelabel.Location = new System.Drawing.Point(1043, 2);
             this.closelabel.Name = "closelabel";
             this.closelabel.Size = new System.Drawing.Size(19, 23);
             this.closelabel.Style = MetroFramework.MetroColorStyle.Blue;
@@ -134,6 +134,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.closelabel.Text = "X";
             this.closelabel.UseCustomBackColor = true;
             this.closelabel.UseCustomForeColor = true;
+            this.closelabel.Click += new System.EventHandler(this.closelabel_Click);
             // 
             // groupBox1
             // 
@@ -345,6 +346,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             this.grid_odunc_aldigi_ktp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_odunc_aldigi_ktp.Size = new System.Drawing.Size(470, 170);
             this.grid_odunc_aldigi_ktp.TabIndex = 34;
+            this.grid_odunc_aldigi_ktp.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.grid_odunc_aldigi_ktp_RowsAdded);
             // 
             // label1
             // 

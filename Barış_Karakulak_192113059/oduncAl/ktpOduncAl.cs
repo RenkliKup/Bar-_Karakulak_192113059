@@ -12,16 +12,37 @@ namespace Barış_Karakulak_192113059.oduncAl
 {
     public partial class ktpOduncAl : Form
     {
+
+        public string id;
+        public string name;
+        public string surname;
+
         public ktpOduncAl()
         {
             InitializeComponent();
         }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
 
+            base.WndProc(ref m);
+        }
         private void ktpOduncAl_Load(object sender, EventArgs e)
         {
             grid_listele.DataSource = bookContext.GetBooks();
             radio_ad_gore.Checked = true;
             btn_odunc_al.Enabled = false;
+            txt_id.Enabled = false;
+            txt_adi.Enabled = false;
+            btn_uzat.Enabled = false;
+            txt_soyad.Enabled = false;
 
         }
         BookContext bookContext = new BookContext();
@@ -58,8 +79,69 @@ namespace Barış_Karakulak_192113059.oduncAl
         {
             int bookId= int.Parse(grid_listele.SelectedRows[0].Cells[0].Value.ToString());
             int StudentId =int.Parse(txt_id.Text);
-            LibraryContext.InsertLibraryContext(bookId, StudentId);
+            Tuple<bool, string> response;
+            response=LibraryContext.InsertLibraryContext(bookId, StudentId);
+            MessageBox.Show(response.Item2, response.Item1.ToString());
+
+            int ogr_id = int.Parse(txt_id.Text);
+            grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ogrSec ogrSec = new ogrSec(this);
+            ogrSec.ShowDialog();
             
+        }
+
+        private void closelabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        LibraryProvider LibraryProvider = new LibraryProvider();
+        private void grid_listele_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (grid_listele.SelectedRows.Count > 0 && txt_id.Text!="")
+            {
+                
+                btn_odunc_al.Enabled = true;
+               
+            }
+            else
+            {
+                btn_odunc_al.Enabled = false;
+            }
+        }
+
+        private void txt_id_TextChanged(object sender, EventArgs e)
+        {
+            int ogr_id = int.Parse(txt_id.Text);
+            grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+        }
+
+        private void btn_uzat_Click(object sender, EventArgs e)
+        {
+            if(grid_odunc_alinan_ktp.SelectedRows.Count>0)
+            {
+                int id =int.Parse(grid_odunc_alinan_ktp.SelectedRows[0].Cells[0].Value.ToString());
+                Tuple<bool, string> response;
+                response=LibraryContext.extendExpiryDateContext(id);
+                MessageBox.Show(response.Item2, response.Item1.ToString());
+                int ogr_id = int.Parse(txt_id.Text);
+                grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+            }
+        }
+
+        private void grid_odunc_alinan_ktp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (grid_odunc_alinan_ktp.SelectedRows.Count > 0)
+            {
+                btn_uzat.Enabled = true;
+            }
+            else
+            {
+                btn_uzat.Enabled = false;
+            }
         }
     }
 }

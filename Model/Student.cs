@@ -27,5 +27,9 @@ namespace Model
         {
             name = null;
         }
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }
