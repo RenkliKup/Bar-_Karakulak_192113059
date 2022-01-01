@@ -381,7 +381,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id Where Library.isDelivered={false}", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {
@@ -421,7 +421,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library RIGHT JOIN Books ON Library.Book_id=Books.Book_id Where Library.Book_id IS NULL", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT  DISTINCT Books.Book_id, Books.Book_name,Books.Book_type,Books.Book_author,Books.Book_page FROM Library RIGHT JOIN Select Books.* from Library INNER JOIN Books ON Library.Book_id=Books.Book_id Where  ON Library.Book_id=Books.Book_id Where Library.isDelivered={true} Library.Book_id IS NULL and Library.isDelivered={true}", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {

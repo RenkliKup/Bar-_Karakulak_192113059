@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataTransactionLayer;
 using Model;
+using Barış_Karakulak_192113059.zed;
 namespace Barış_Karakulak_192113059
 {
     public partial class Anasayfa : Form
@@ -76,6 +77,13 @@ namespace Barış_Karakulak_192113059
         {
             iadeEt.KtpIadeEt iadeEt = new iadeEt.KtpIadeEt();
             iadeEt.Show();
+        }
+
+        private void btn_zedgrapgh_Click(object sender, EventArgs e)
+        {
+            zed.zed form = new zed.zed();
+            form.Show();
+            
         }
     }
 }

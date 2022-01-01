@@ -38,7 +38,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             btn_sil.Enabled = false;
             metroGrid1.DataSource = StudentContext.GetStudents();
         }
-
+        
 
 
 
@@ -113,6 +113,11 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
                 metroGrid1.DataSource = StudentContext.GetStudents();
 
             }
+        }
+
+        private void zedGraphControl1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

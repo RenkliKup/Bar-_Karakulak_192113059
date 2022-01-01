@@ -122,6 +122,7 @@ namespace Barış_Karakulak_192113059
             this.btn_zedgrapgh.UseCustomForeColor = true;
             this.btn_zedgrapgh.UseSelectable = true;
             this.btn_zedgrapgh.UseStyleColors = true;
+            this.btn_zedgrapgh.Click += new System.EventHandler(this.btn_zedgrapgh_Click);
             // 
             // btn_odunc_al
             // 
