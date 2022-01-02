@@ -97,7 +97,7 @@ namespace DataTransactionLayer
                 {
                     conn.Open();
                     OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Library SET debt={(int)updateDebt}" +
-                        $" Where id={id} AND isDelivered={false}", conn);//UPDATE Library SET expiry_date = DateAdd("d", 15, expiry_date) where id = 2;
+                        $" Where id={id} AND deliveredDate='teslim edilmedi'", conn);//UPDATE Library SET expiry_date = DateAdd("d", 15, expiry_date) where id = 2;
                     if (cmd.ExecuteNonQuery() != -1)
                     {
                         return Tuple.Create(true, "Başarılı");
@@ -130,7 +130,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Library SET isDelivered={true} " +
+                    OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Library SET deliveredDate='{DateTime.Now.ToShortDateString()}' " +
                         $"Where id={id}", conn);
                     if (cmd.ExecuteNonQuery() != -1)
                     {
@@ -178,7 +178,7 @@ namespace DataTransactionLayer
                                read.GetDateTime(3),
                                read.GetDateTime(4),
                                decimal.Parse(read.GetInt32(5).ToString()),
-                               read.GetBoolean(6)
+                               read.GetString(6)
                                 )
                             );
                     }
@@ -208,7 +208,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library Where isDelivered={false}", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library Where deliveredDate='teslim edilmedi'", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {
@@ -280,8 +280,8 @@ namespace DataTransactionLayer
 
             }
         }
-        OleDbCommand cmd;
-        public List<Library> OduncAldigiKitaplar(int ogrId,bool choose)
+       
+        public List<Library> OduncAldigiKitaplar(int ogrId)
         {
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
@@ -293,18 +293,11 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    if(choose)
-                    {
-                        
-                        cmd = new SqlConnection().cmd($"SELECT Library.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id WHERE Library.Student_id={ogrId}" +
-                       $" and isDelivered={false}", conn);
-
-                    }
-                   else
-                    {
-                        cmd = new SqlConnection().cmd($"SELECT Library.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id WHERE Library.Student_id={ogrId}" +
+                    
+                   
+                        OleDbCommand cmd = new SqlConnection().cmd($"SELECT Library.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id WHERE Library.Student_id={ogrId}" +
                        $"", conn);
-                    }
+                    
                     OleDbDataReader read = cmd.ExecuteReader();
                     while (read.Read())
                     {
@@ -316,7 +309,7 @@ namespace DataTransactionLayer
                            read.GetDateTime(3),
                            read.GetDateTime(4),
                            decimal.Parse(read.GetInt32(5).ToString()),
-                           read.GetBoolean(6)
+                           read.GetString(6)
                             )
                              );
 
@@ -337,8 +330,7 @@ namespace DataTransactionLayer
         }
         public List<Student> BorcuOlanlar()
         {
-            StudentContext studentContext = new StudentContext();
-            BookContext bookContext = new BookContext();
+            
             List<Student> students = new List<Student>();
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
@@ -371,85 +363,7 @@ namespace DataTransactionLayer
 
             }
         }
-        public List<Book> AlinmisKitaplar()
-        {
-            using (OleDbConnection conn = new SqlConnection().Conn())
-            {
-                BookContext bookContext = new BookContext();
 
-                List<Book> books = new List<Book>();
-                try
-                {
-                    conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Library INNER JOIN Books ON Library.Book_id=Books.Book_id Where Library.isDelivered={false}", conn);
-                    OleDbDataReader read = cmd.ExecuteReader();
-                    while (read.Read())
-                    {
-                        books.Add(
-                             new Book(
-                            read.GetInt32(0),
-                            read.GetString(1),
-                            read.GetString(2),
-                            read.GetString(3),
-                            read.GetInt32(4)
-                                 )
-                             );
-
-                    }
-                    read.Close();
-                    return books;
-                }
-
-                finally
-                {
-                    if (conn.State != System.Data.ConnectionState.Closed)
-                    {
-                        conn.Close();
-                    }
-                }
-
-            }
-        }
-        
-        public List<Book> AlinmamisKitaplar()
-        {
-            using (OleDbConnection conn = new SqlConnection().Conn())
-            {
-                BookContext bookContext = new BookContext();
-
-                List<Book> books = new List<Book>();
-                try
-                {
-                    conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT  DISTINCT Books.Book_id, Books.Book_name,Books.Book_type,Books.Book_author,Books.Book_page FROM Library RIGHT JOIN Select Books.* from Library INNER JOIN Books ON Library.Book_id=Books.Book_id Where  ON Library.Book_id=Books.Book_id Where Library.isDelivered={true} Library.Book_id IS NULL and Library.isDelivered={true}", conn);
-                    OleDbDataReader read = cmd.ExecuteReader();
-                    while (read.Read())
-                    {
-                        books.Add(
-                             new Book(
-                            read.GetInt32(0),
-                            read.GetString(1),
-                            read.GetString(2),
-                            read.GetString(3),
-                            read.GetInt32(4)
-                                 )
-                             );
-
-                    }
-                    read.Close();
-                    return books;
-                }
-
-                finally
-                {
-                    if (conn.State != System.Data.ConnectionState.Closed)
-                    {
-                        conn.Close();
-                    }
-                }
-
-            }
-        }
         #region Read library spesific
         public List<Library> teslimEtigiKitaplar(int ogr_id)
         {
@@ -461,7 +375,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library WHERE Student_id={ogr_id} and isDelivered={true}", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library WHERE Student_id={ogr_id} and deliveredDate<>'teslim edilmedi'", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     
                     while(read.Read())
@@ -474,7 +388,7 @@ namespace DataTransactionLayer
                            read.GetDateTime(3),
                            read.GetDateTime(4),
                            decimal.Parse(read.GetInt32(5).ToString()),
-                           read.GetBoolean(6)
+                           read.GetString(6)
                             )
                         );
                     }
@@ -497,6 +411,51 @@ namespace DataTransactionLayer
             }
         }
         #endregion
+        public List<Library> teslimEtmedigiKitaplar(int ogr_id)
+        {
+            StudentContext studentContext = new StudentContext();
+            BookContext bookContext = new BookContext();
+            List<Library> librarys = new List<Library>();
+            using (OleDbConnection conn = new SqlConnection().Conn())
+            {
+                try
+                {
+                    conn.Open();
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library WHERE Student_id={ogr_id} and deliveredDate='teslim edilmedi'", conn);
+                    OleDbDataReader read = cmd.ExecuteReader();
+
+                    while (read.Read())
+                    {
+                        librarys.Add(
+                        new Library(
+                            read.GetInt32(0),
+                           studentContext.getOneStudent(read.GetInt32(1)).Item3,
+                           bookContext.getOneBook(read.GetInt32(2)).Item3,
+                           read.GetDateTime(3),
+                           read.GetDateTime(4),
+                           decimal.Parse(read.GetInt32(5).ToString()),
+                           read.GetString(6)
+                            )
+                        );
+                    }
+
+
+
+
+                    read.Close();
+                    return librarys;
+                }
+
+                finally
+                {
+                    if (conn.State != System.Data.ConnectionState.Closed)
+                    {
+                        conn.Close();
+                    }
+                }
+
+            }
+        }
         #region Read library spesific
         public List<Library> alinanKitaplar(int ogr_id)
         {
@@ -508,7 +467,7 @@ namespace DataTransactionLayer
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library Where Student_id={ogr_id} and isDelivered={false}", conn);
+                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Library Where Student_id={ogr_id} and deliveredDate<>'teslim edilmedi'", conn);
                     OleDbDataReader read = cmd.ExecuteReader();
                     
                     while(read.Read())
@@ -521,7 +480,7 @@ namespace DataTransactionLayer
                           read.GetDateTime(3),
                           read.GetDateTime(4),
                           decimal.Parse(read.GetInt32(5).ToString()),
-                          read.GetBoolean(6)
+                          read.GetString(6)
                            )
                        );
                     }
@@ -569,7 +528,7 @@ namespace DataTransactionLayer
                                read.GetDateTime(3),
                                read.GetDateTime(4),
                                decimal.Parse(read.GetInt32(5).ToString()),
-                               read.GetBoolean(6)
+                               read.GetString(6)
                                 )
                             );
                     

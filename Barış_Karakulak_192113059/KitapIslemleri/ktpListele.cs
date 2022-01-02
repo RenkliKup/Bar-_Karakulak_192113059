@@ -79,11 +79,11 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
         {
             if(radio_alinmamis_ktp.Checked)
             {
-               grid_listele.DataSource= LibraryContext.AlinmamisKitaplar();
+               grid_listele.DataSource= bookContext.AlinmamisKitaplar();
             }
             else
             {
-                grid_listele.DataSource = LibraryContext.AlinmisKitaplar();
+                grid_listele.DataSource = bookContext.AlinmisKitaplar();
 
             }
         }

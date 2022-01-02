@@ -13,14 +13,15 @@ namespace Model
         public string type { get; set; }
         public string author { get; set; }
         public int page { get; set; }
-
-        public Book(int id, string name, string type, string author, int page)
+        public bool isDelivered { get; set; }
+        public Book(int id, string name, string type, string author, int page,bool isDelivered)
         {
             this.id = id;
             this.name = name;
             this.type = type;
             this.author = author;
             this.page = page;
+            this.isDelivered = isDelivered;
         }
         public Book(string name, string type, string author, int page)
         {
@@ -28,6 +29,7 @@ namespace Model
             this.type = type;
             this.author = author;
             this.page = page;
+            
         }
         public Book()
         {
@@ -35,7 +37,7 @@ namespace Model
         }
         public override string ToString()
         {
-            return name;
+            return id.ToString();
         }
     }
 }

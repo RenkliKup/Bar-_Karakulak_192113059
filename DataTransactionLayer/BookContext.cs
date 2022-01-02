@@ -33,5 +33,21 @@ namespace DataTransactionLayer
         {
             return bookProvider.GoreAra(arananDeger,satirAdi);
         }
+        public List<Book> AlinmamisKitaplar()
+        {
+            return bookProvider.AlinmamisKitaplar();
+        }
+        public List<Book> AlinmisKitaplar()
+        {
+            return bookProvider.AlinmisKitaplar();
+        }
+        public Tuple<Boolean, string> oduncAl(int bookId)
+        {
+            return bookProvider.oduncAl(bookId);
+        }
+        public Tuple<Boolean, string> geriVer(int bookId)
+        {
+            return bookProvider.geriVer(bookId);
+        }
     }
 }

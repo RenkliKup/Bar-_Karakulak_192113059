@@ -77,14 +77,25 @@ namespace Barış_Karakulak_192113059.oduncAl
 
         private void btn_odunc_al_Click(object sender, EventArgs e)
         {
+            if (!bool.Parse(grid_listele.SelectedRows[0].Cells[5].Value.ToString()))
+            {
+                MessageBox.Show("Bu kitap alınmış");
+                return;
+            }
             int bookId= int.Parse(grid_listele.SelectedRows[0].Cells[0].Value.ToString());
             int StudentId =int.Parse(txt_id.Text);
             Tuple<bool, string> response;
-            response=LibraryContext.InsertLibraryContext(bookId, StudentId);
+            Tuple<bool, string> response2;
+
+            response = LibraryContext.InsertLibraryContext(bookId, StudentId);
+            response2 = bookContext.oduncAl(bookId);
             MessageBox.Show(response.Item2, response.Item1.ToString());
+            MessageBox.Show(response2.Item2, response2.Item1.ToString());
+
 
             int ogr_id = int.Parse(txt_id.Text);
-            grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+            grid_listele.DataSource = bookContext.GetBooks();
+            grid_odunc_alinan_ktp.DataSource = LibraryContext.teslimEtmedigiKitaplar(ogr_id);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,7 +127,8 @@ namespace Barış_Karakulak_192113059.oduncAl
         private void txt_id_TextChanged(object sender, EventArgs e)
         {
             int ogr_id = int.Parse(txt_id.Text);
-            grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+            grid_odunc_alinan_ktp.DataSource = LibraryContext.teslimEtmedigiKitaplar(ogr_id);
+
         }
 
         private void btn_uzat_Click(object sender, EventArgs e)

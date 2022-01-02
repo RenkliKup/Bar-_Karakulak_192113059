@@ -14,9 +14,9 @@ namespace Model
         public DateTime getDate { get; set; }
         public DateTime expiryDate { get; set; }
         public decimal debt { get; set; }
-        public Boolean isDelivered { get; set; }
+        public string deliveredDate { get; set; }
 
-        public Library(int id, Student student, Book book, DateTime getDate, DateTime expiryDate,decimal debt, Boolean isDelivered)
+        public Library(int id, Student student, Book book, DateTime getDate, DateTime expiryDate,decimal debt,string deliveredDate)
         {
             this.id = id;
             this.student = student;
@@ -24,7 +24,7 @@ namespace Model
             this.getDate = getDate;
             this.expiryDate = expiryDate;
             this.debt = debt;
-            this.isDelivered = isDelivered;
+            this.deliveredDate = deliveredDate;
         }
         public Library(Student student, Book book)
         {

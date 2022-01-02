@@ -29,7 +29,7 @@ namespace Model
         }
         public override string ToString()
         {
-            return name;
+            return id.ToString();
         }
     }
 }

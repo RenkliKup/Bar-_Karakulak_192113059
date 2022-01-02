@@ -30,7 +30,7 @@ namespace Barış_Karakulak_192113059.zed
 
             base.WndProc(ref m);
         }
-        LibraryContext LibraryContext = new LibraryContext();
+        BookContext BookContext = new BookContext();
         private void closelabel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,8 +48,8 @@ namespace Barış_Karakulak_192113059.zed
 
             // Make up some random data points
             string[] labels = { "Verilmeye Hazır Kitaplar", "Verilmiş Kitaplar"  };
-            int alinmamisKitaplar = LibraryContext.AlinmamisKitaplar().Count;
-            int alinmisKitaplar = LibraryContext.AlinmisKitaplar().Count;
+            int alinmamisKitaplar = BookContext.AlinmamisKitaplar().Count;
+            int alinmisKitaplar = BookContext.AlinmisKitaplar().Count;
             double[] y = { alinmamisKitaplar, alinmisKitaplar };
             
             

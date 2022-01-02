@@ -104,15 +104,16 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
             base.WndProc(ref m);
         }
+        BookContext BookContext = new BookContext();
         private void data_grid_listele_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (data_grid_listele.SelectedRows[0].Cells.Count <= 4)
+                if (data_grid_listele.SelectedRows[0].Cells.Count <= 5)
                 {
                     
                     int secilen_id = int.Parse(data_grid_listele.SelectedRows[0].Cells[0].Value.ToString());
-                    grid_odunc_aldigi_ktp.DataSource = LibraryContext.OduncAldigiKitaplar(secilen_id,false);
+                    grid_odunc_aldigi_ktp.DataSource = LibraryContext.OduncAldigiKitaplar(secilen_id);
                     for (int i = 0; i < grid_odunc_aldigi_ktp.Rows.Count; i++)
                     {
                         if ((DateTime.Parse(grid_odunc_aldigi_ktp.Rows[i].Cells[4].Value.ToString()) - DateTime.Now).Days < 0)
@@ -128,7 +129,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
                             grid_odunc_aldigi_ktp.Rows[i].DefaultCellStyle.BackColor = Color.Red;
 
                         }
-                        else if (bool.Parse(grid_odunc_aldigi_ktp.Rows[i].Cells[6].Value.ToString()))
+                        else if (grid_odunc_aldigi_ktp.Rows[i].Cells[6].Value.ToString()!="teslim edilmedi")
                         {
                             grid_odunc_aldigi_ktp.Rows[i].DefaultCellStyle.BackColor = Color.Green;
                         }
@@ -137,7 +138,7 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             }
             catch(Exception s)
             {
-                
+                throw;
                 grid_odunc_aldigi_ktp.DataSource = null;
             }
         }

@@ -39,6 +39,7 @@ namespace Barış_Karakulak_192113059
         LibraryContext LibraryContext = new LibraryContext();
         private void Form1_Load(object sender, EventArgs e)
         {
+         
             Tuple<bool, string> response;
             response= LibraryContext.DebtUpdate();
 

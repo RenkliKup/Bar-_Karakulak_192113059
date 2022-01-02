@@ -51,7 +51,7 @@ namespace Barış_Karakulak_192113059.iadeEt
             txt_ktp_ad.Text = ktp[0].book.name.ToString();
             txt_ktp_sayfa.Text = ktp[0].book.page.ToString();
             txt_ktp_yazari.Text = ktp[0].book.author.ToString();
-            txt_durumu.Text = ktp[0].isDelivered ? "Rafta" : "Ödünç Alınmış";
+            txt_durumu.Text = ktp[0].book.isDelivered ? "Rafta" : "Ödünç Alınmış";
             txt_ogr_ad.Text = ktp[0].student.name.ToString();
             txt_ogr_soyad.Text = ktp[0].student.surname.ToString();
         }

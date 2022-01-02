@@ -33,22 +33,15 @@ namespace DataTransactionLayer
         {
             return LibraryProvider.OduncAldigiOgrenciler(ktpId);
         }
-        public List<Library> OduncAldigiKitaplar(int ogrId,bool choose)
+        public List<Library> OduncAldigiKitaplar(int ogrId)
         {
-            return LibraryProvider.OduncAldigiKitaplar(ogrId,choose);
+            return LibraryProvider.OduncAldigiKitaplar(ogrId);
         }
         public List<Student> BorcuOlanlar()
         {
             return LibraryProvider.BorcuOlanlar();
         }
-        public List<Book> AlinmamisKitaplar()
-        {
-            return LibraryProvider.AlinmamisKitaplar();
-        }
-        public List<Book> AlinmisKitaplar()
-        {
-            return LibraryProvider.AlinmisKitaplar();
-        }
+      
         public Tuple<Boolean, string> returnBook(int id)
         {
             return LibraryProvider.returnBook(id);
@@ -64,6 +57,10 @@ namespace DataTransactionLayer
         public List<Library> alinanKitaplar(int ogr_id)
         {
             return LibraryProvider.alinanKitaplar(ogr_id);
+        }
+        public List<Library> teslimEtmedigiKitaplar(int ogr_id)
+        {
+            return LibraryProvider.teslimEtmedigiKitaplar(ogr_id);
         }
     }
 }

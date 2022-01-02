@@ -135,7 +135,8 @@ namespace DataTransactionLayer
                             read.GetString(1),
                             read.GetString(2),
                             read.GetString(3),
-                            read.GetInt32(4)
+                            read.GetInt32(4),
+                            read.GetBoolean(5)
                             )
                             );
                         read.Close();
@@ -161,29 +162,24 @@ namespace DataTransactionLayer
             }
         }
         #endregion
-        #region Read Book
-        public List<Book> ReadBook()
+        public Tuple<Boolean, string> oduncAl(int bookId)
         {
-            List<Book> books = new List<Book>();
+
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd("SELECT * FROM Books", conn);
-                    OleDbDataReader read = cmd.ExecuteReader();
-                    while (read.Read())
+                    OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Books SET isDelivered={false} where Book_id={bookId}", conn);
+                    if (cmd.ExecuteNonQuery() != -1)
                     {
-                        books.Add(new Book(
-                            read.GetInt32(0),
-                            read.GetString(1),
-                            read.GetString(2),
-                            read.GetString(3),
-                            read.GetInt32(4)
-                            ));
+                        return Tuple.Create(true, "Başarılı");
                     }
-                    read.Close();
-                    return books;
+                    else
+                    {
+                        return Tuple.Create(false, "Başarısız");
+                    }
+
                 }
 
                 finally
@@ -196,31 +192,24 @@ namespace DataTransactionLayer
 
             }
         }
-        #endregion
-       
-        #region GoreAra
-        public List<Book> GoreAra(string arananDeger, string satirAdi)
+        public Tuple<Boolean, string> geriVer(int bookId)
         {
-            List<Book> books = new List<Book>();
+
             using (OleDbConnection conn = new SqlConnection().Conn())
             {
                 try
                 {
                     conn.Open();
-                    OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Books WHERE {satirAdi} LIKE '%{arananDeger}%'", conn);
-                    OleDbDataReader read = cmd.ExecuteReader();
-                    while (read.Read())
+                    OleDbCommand cmd = new SqlConnection().cmd($"UPDATE Books SET isDelivered={true} Where Book_id={bookId}", conn);
+                    if (cmd.ExecuteNonQuery() != -1)
                     {
-                        books.Add(new Book(
-                            read.GetInt32(0),
-                            read.GetString(1),
-                            read.GetString(2),
-                            read.GetString(3),
-                            read.GetInt32(4)
-                            ));
+                        return Tuple.Create(true, "Başarılı");
                     }
-                    read.Close();
-                    return books;
+                    else
+                    {
+                        return Tuple.Create(false, "Başarısız");
+                    }
+
                 }
 
                 finally
@@ -233,7 +222,164 @@ namespace DataTransactionLayer
 
             }
         }
-        #endregion
+            #region Read Book
+            public List<Book> ReadBook()
+            {
+                List<Book> books = new List<Book>();
+                using (OleDbConnection conn = new SqlConnection().Conn())
+                {
+                    try
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new SqlConnection().cmd("SELECT * FROM Books", conn);
+                        OleDbDataReader read = cmd.ExecuteReader();
+                        while (read.Read())
+                        {
+                            books.Add(new Book(
+                                read.GetInt32(0),
+                                read.GetString(1),
+                                read.GetString(2),
+                                read.GetString(3),
+                                read.GetInt32(4),
+                                read.GetBoolean(5)
+                                ));
+                        }
+                        read.Close();
+                        return books;
+                    }
 
+                    finally
+                    {
+                        if (conn.State != System.Data.ConnectionState.Closed)
+                        {
+                            conn.Close();
+                        }
+                    }
+
+                }
+            }
+            #endregion
+
+            #region GoreAra
+            public List<Book> GoreAra(string arananDeger, string satirAdi)
+            {
+                List<Book> books = new List<Book>();
+                using (OleDbConnection conn = new SqlConnection().Conn())
+                {
+                    try
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new SqlConnection().cmd($"SELECT * FROM Books WHERE {satirAdi} LIKE '%{arananDeger}%'", conn);
+                        OleDbDataReader read = cmd.ExecuteReader();
+                        while (read.Read())
+                        {
+                            books.Add(new Book(
+                                read.GetInt32(0),
+                                read.GetString(1),
+                                read.GetString(2),
+                                read.GetString(3),
+                                read.GetInt32(4),
+                                read.GetBoolean(5)
+                                ));
+                        }
+                        read.Close();
+                        return books;
+                    }
+
+                    finally
+                    {
+                        if (conn.State != System.Data.ConnectionState.Closed)
+                        {
+                            conn.Close();
+                        }
+                    }
+
+                }
+            }
+            #endregion
+            public List<Book> AlinmisKitaplar()
+            {
+                using (OleDbConnection conn = new SqlConnection().Conn())
+                {
+                    BookContext bookContext = new BookContext();
+
+                    List<Book> books = new List<Book>();
+                    try
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new SqlConnection().cmd($"SELECT Books.* FROM Books where isDelivered={false}", conn);
+                        OleDbDataReader read = cmd.ExecuteReader();
+                        while (read.Read())
+                        {
+                            books.Add(
+                                 new Book(
+                                read.GetInt32(0),
+                                read.GetString(1),
+                                read.GetString(2),
+                                read.GetString(3),
+                                read.GetInt32(4),
+                                read.GetBoolean(5)
+                                     )
+                                 );
+
+                        }
+                        read.Close();
+                        return books;
+                    }
+
+                    finally
+                    {
+                        if (conn.State != System.Data.ConnectionState.Closed)
+                        {
+                            conn.Close();
+                        }
+                    }
+
+                }
+            }
+
+
+            public List<Book> AlinmamisKitaplar()
+            {
+                using (OleDbConnection conn = new SqlConnection().Conn())
+                {
+                    BookContext bookContext = new BookContext();
+
+                    List<Book> books = new List<Book>();
+                    try
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new SqlConnection().cmd($"select * from Books Where isDelivered={true}", conn);
+                        OleDbDataReader read = cmd.ExecuteReader();
+                        while (read.Read())
+                        {
+                            books.Add(
+                                 new Book(
+                                read.GetInt32(0),
+                                read.GetString(1),
+                                read.GetString(2),
+                                read.GetString(3),
+                                read.GetInt32(4),
+                                read.GetBoolean(5)
+
+                                     )
+                                 );
+
+                        }
+                        read.Close();
+                        return books;
+                    }
+
+                    finally
+                    {
+                        if (conn.State != System.Data.ConnectionState.Closed)
+                        {
+                            conn.Close();
+                        }
+                    }
+
+                }
+            }
+
+        }
     }
-}
