@@ -34,6 +34,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
         private void ktpEkle_Load(object sender, EventArgs e)
         {
+            //string liste tipinde types adında içinde kitap tiplerini barındaran bir liste oluturuyorum
             string[] types = {"Roman",
             "Aşk",
             "Psikoloji",
@@ -41,23 +42,34 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             "Yalnızlık",
             "Gelecek Kaygısı",
             "Vb... :("};
+            //combobox a oluşturduğum listeyi atıyorum
             combo_ktp_tip.Items.AddRange(types);
         }
 
         private void closelabel_Click(object sender, EventArgs e)
         {
+            //formu kapatıyorum
             this.Close();
         }
+        //bookContext class ından bookcontext adında bir obje oluşturuyorum
         BookContext BookContext = new BookContext();
         private void btn_ekle_Click(object sender, EventArgs e)
         {
+            //book clasından book objesi oluşturuyorum ve içine name,type,,author,page degerlerini atyorum
             Book book = new Book(name:txt_ktp_ad.Text,
                 type:combo_ktp_tip.Text,
                 author:txt_ktp_yazar.Text,
                 page:(int)numeric_sayfa_sayisi.Value);
+            //Tuple<bool, string> tipinden response adında bir degisken tanımlıyorum
             Tuple<bool, string> response;
+            //response degiskenine bookcontext ten gelen InsertBookContext fonksiyonunun döndürdüğü şeyleri atıyorum
             response=BookContext.InsertBookContext(book);
-            MessageBox.Show(response.Item2, response.Item1.ToString());
+            //eger response.Item1 degeri true ise
+            if (response.Item1)
+            {
+                //messagebox gösterilmistir
+                MessageBox.Show("Eklenilmiş");
+            }
         }
     }
 }

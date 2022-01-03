@@ -13,9 +13,7 @@ namespace Barış_Karakulak_192113059.oduncAl
     public partial class ktpOduncAl : Form
     {
 
-        public string id;
-        public string name;
-        public string surname;
+       
 
         public ktpOduncAl()
         {
@@ -36,6 +34,7 @@ namespace Barış_Karakulak_192113059.oduncAl
         }
         private void ktpOduncAl_Load(object sender, EventArgs e)
         {
+            //grid_listele
             grid_listele.DataSource = bookContext.GetBooks();
             radio_ad_gore.Checked = true;
             btn_odunc_al.Enabled = false;
@@ -89,8 +88,10 @@ namespace Barış_Karakulak_192113059.oduncAl
 
             response = LibraryContext.InsertLibraryContext(bookId, StudentId);
             response2 = bookContext.oduncAl(bookId);
-            MessageBox.Show(response.Item2, response.Item1.ToString());
-            MessageBox.Show(response2.Item2, response2.Item1.ToString());
+            if (response.Item1 && response2.Item1)
+            {
+                MessageBox.Show("Ödünç Alındı");
+            }
 
 
             int ogr_id = int.Parse(txt_id.Text);
@@ -138,9 +139,13 @@ namespace Barış_Karakulak_192113059.oduncAl
                 int id =int.Parse(grid_odunc_alinan_ktp.SelectedRows[0].Cells[0].Value.ToString());
                 Tuple<bool, string> response;
                 response=LibraryContext.extendExpiryDateContext(id);
-                MessageBox.Show(response.Item2, response.Item1.ToString());
+                
+                if (response.Item1)
+                {
+                    MessageBox.Show("İade Edildi");
+                }
                 int ogr_id = int.Parse(txt_id.Text);
-                grid_odunc_alinan_ktp.DataSource = LibraryProvider.alinanKitaplar(ogr_id);
+                grid_odunc_alinan_ktp.DataSource = LibraryContext.teslimEtmedigiKitaplar(ogr_id);
             }
         }
 

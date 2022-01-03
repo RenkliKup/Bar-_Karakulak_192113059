@@ -36,6 +36,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
         private void closelabel_Click(object sender, EventArgs e)
         {
+            //formu kapatıyorum
             this.Close();
         }
 
@@ -43,27 +44,38 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
+            //ktpSil formundan ktpSilForm objesi oluşturuyorum
             ktpSil ktpSilForm = new ktpSil();
+            //ktpSilForm objesini gösteriyorum
             ktpSilForm.Show();
         }
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            
-                ktpEkle ktpEkleForm = new ktpEkle();
-                ktpEkleForm.Show();
+            //ktpEkle formundan ktpEkleForm objesi oluşturuyorum
+
+            ktpEkle ktpEkleForm = new ktpEkle();
+            //ktpEkleForm objesini gösteriyorum
+
+            ktpEkleForm.Show();
             
         }
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
+            //ktpguncelle formundan ktpGuncelleForm objesi oluşturuyorum
+
             ktpGuncelle ktpGuncelleForm = new ktpGuncelle();
+            //ktpGuncelleForm objesini gösteriyorum
             ktpGuncelleForm.Show();
         }
 
         private void btn_listele_Click(object sender, EventArgs e)
         {
+            //ktpguncelle formundan ktpListeleForm objesi oluşturuyorum
+
             ktpListele ktpListeleForm = new ktpListele();
+            //ktpListeleForm objesini gösteriyorum
             ktpListeleForm.Show();
         }
     }

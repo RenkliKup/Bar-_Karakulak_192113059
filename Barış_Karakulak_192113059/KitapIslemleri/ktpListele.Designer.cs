@@ -265,6 +265,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             this.radio_alinmis_ktp.Text = "Alınmış Kitaplar";
             this.radio_alinmis_ktp.UseCustomBackColor = true;
             this.radio_alinmis_ktp.UseSelectable = true;
+            this.radio_alinmis_ktp.CheckedChanged += new System.EventHandler(this.radio_alinmis_ktp_CheckedChanged);
             // 
             // metroRadioButton4
             // 

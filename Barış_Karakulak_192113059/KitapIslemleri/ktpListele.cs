@@ -35,28 +35,37 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
         {
 
         }
+        //bookcontext classından bookcontext isminde bir obje 
         BookContext bookContext = new BookContext();
         private void ktpListele_Load(object sender, EventArgs e)
         {
+            //grid_listele gridine bookcontextten gelen getbooks fonksiyonunun listesini atıyorum
             grid_listele.DataSource = bookContext.GetBooks();
+            //radio_ad_gore checked ozelligini aktiflesiriyorum
             radio_ad_gore.Checked = true;
+            //radio_alinmamis_ktp checked ozelligini aktiflesiriyorum
+
             radio_alinmamis_ktp.Checked = true;
 
         }
 
         private void closelabel_Click(object sender, EventArgs e)
         {
+            //formu kapatıyorum
             this.Close();
         }
 
         private void btn_ara_Click(object sender, EventArgs e)
         {
+            //radio_ad_gore checked özelliği true ise
             if (radio_ad_gore.Checked)
             {
+                //grid_listele nin datasoruce a bookcontextten gelen goreAra fonksiyonunu atıyorum
                 grid_listele.DataSource = bookContext.GoreAra(txt_aranan_deger.Text, "Book_name");
             }
             else
             {
+                //grid_listele nin datasoruce a bookcontextten gelen goreAra fonksiyonunu atıyorum
                 grid_listele.DataSource = bookContext.GoreAra(txt_aranan_deger.Text, "Book_author");
 
             }
@@ -66,26 +75,41 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
         {
             try
             {
+                //integer tipinde ktpId adında bir degisken olusturdum
+                //grid_listele de secilen degerleri atıyorum
                 int ktpId =int.Parse(grid_listele.SelectedRows[0].Cells[0].Value.ToString());
+                //oducAldigiOgrenciler fonksiyonunu gride atıyorum
                 grid_odunc_aldigi_ogr.DataSource= LibraryContext.OduncAldigiOgrenciler(ktpId);
             }
             catch
             {
+                //gride null degeri atıyorum
+
                 grid_odunc_aldigi_ogr.DataSource = null;
             }
         }
+        //librarycontext classından librarycontext objesi atıyorum
         LibraryContext LibraryContext = new LibraryContext();
         private void btn_listele_Click(object sender, EventArgs e)
         {
+            //eger radio_alinmamis_ktp checked ozelligi true ise
             if(radio_alinmamis_ktp.Checked)
             {
+                //alinmamiskitaplar ı gride atıyorum
                grid_listele.DataSource= bookContext.AlinmamisKitaplar();
             }
             else
             {
+                //alinmiskitaplar ı gride atıyorum
+
                 grid_listele.DataSource = bookContext.AlinmisKitaplar();
 
             }
+        }
+
+        private void radio_alinmis_ktp_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

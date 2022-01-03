@@ -82,7 +82,10 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
             int id = int.Parse(metroGrid1.SelectedRows[0].Cells[0].Value.ToString());
             Tuple<bool, string> response;
             response = StudentContext.DeleteStudentContext(id);
-            MessageBox.Show(response.Item2, response.Item1.ToString());
+            if (response.Item1)
+            {
+                MessageBox.Show("Öğrenci Silindi");
+            }
             metroGrid1.DataSource = StudentContext.GetStudents();
 
         }
