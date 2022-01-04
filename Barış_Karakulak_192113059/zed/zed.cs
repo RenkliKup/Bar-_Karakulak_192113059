@@ -30,9 +30,11 @@ namespace Barış_Karakulak_192113059.zed
 
             base.WndProc(ref m);
         }
+        //BookContext olusturdum
         BookContext BookContext = new BookContext();
         private void closelabel_Click(object sender, EventArgs e)
         {
+            //formu kapat
             this.Close();
         }
 

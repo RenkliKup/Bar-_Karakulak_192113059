@@ -37,29 +37,37 @@ namespace Barış_Karakulak_192113059.OgrenciIslemleri
 
         private void closelabel_Click(object sender, EventArgs e)
         {
+            //formu kapat
             this.Close();
         }
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
+            //ogrEkle formunun ogrEkleForm adında bir objesini oluşturuyorum
             ogrEkle ogrEkleForm = new ogrEkle();
+            //ogrEkleForm objesini gosteriyorum
             ogrEkleForm.Show();
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
+            //ogrSil formunun ogrSilForm adında bir objesini oluşturuyorum
             OgrSil ogrSilForm = new OgrSil();
+            //ogrSilForm objesini gosteriyorum
             ogrSilForm.Show();
         }
 
         private void btn_Guncelle_Click(object sender, EventArgs e)
         {
+            //ogrGuncelle formunun ogrGuncelleForm adında bir objesini oluşturuyorum
             ogrGuncelle ogrGuncelleForm = new ogrGuncelle();
+            //ogrGuncelleForm objesini gosteriyorum
             ogrGuncelleForm.Show();
         }
 
         private void btn_Listele_Click(object sender, EventArgs e)
         {
+            //ogrListele formunun ogrListeleForm adında bir objesini oluşturuyorum
             ogrListele ogrListeleForm = new ogrListele();
             ogrListeleForm.Show();
         }
