@@ -97,7 +97,7 @@ namespace Barış_Karakulak_192113059.iadeEt
 
         }
         //ogrenci secme butonu
-        //click eventi
+        //click  eventi
         private void button1_Click(object sender, EventArgs e)
         {
             //ogrsec formunun objesini oluşturuyorum oluşturuyorum
