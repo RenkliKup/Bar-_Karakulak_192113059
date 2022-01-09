@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransactionLayer", "Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{8E64F7AE-3779-4C5F-BCD9-97CA19156B1C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{EC254BB3-AAF9-4AA3-8165-A9452BD65192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8E64F7AE-3779-4C5F-BCD9-97CA19156B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E64F7AE-3779-4C5F-BCD9-97CA19156B1C}.Release|x86.ActiveCfg = Release|Any CPU
 		{8E64F7AE-3779-4C5F-BCD9-97CA19156B1C}.Release|x86.Build.0 = Release|Any CPU
+		{EC254BB3-AAF9-4AA3-8165-A9452BD65192}.Debug|Any CPU.ActiveCfg = Debug
+		{EC254BB3-AAF9-4AA3-8165-A9452BD65192}.Debug|x86.ActiveCfg = Debug
+		{EC254BB3-AAF9-4AA3-8165-A9452BD65192}.Release|Any CPU.ActiveCfg = Release
+		{EC254BB3-AAF9-4AA3-8165-A9452BD65192}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
