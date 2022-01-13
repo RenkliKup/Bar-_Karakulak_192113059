@@ -16,18 +16,12 @@
         "Entry"
         {
         "MsmKey" = "8:_02894DD02C5C97E67D37F18FF56CAC9E"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1E6A0627F37D4DAE8F40A7EEC77580DA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "MsmKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,31 +34,31 @@
         "Entry"
         {
         "MsmKey" = "8:_3B706780589DD6A94DBD709B33A0EEE6"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6424D8C4C84DF0B53C68F27BE7383644"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_74CD1A60CA45A7FAD9C4FB8362FE8145"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_82652371C99E7107B189A1F88E3F9BFF"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_CFD98809B3A18B8598CF81565E5378B3"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D3C92EC38AF0383523E1140745DA862F"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -100,13 +94,13 @@
         "Entry"
         {
         "MsmKey" = "8:_F284E370074C276693D02C55D742AACE"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F784697BAAAA860FF17D2F40F8670738"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +112,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_20E407F0F357442F8DB148C2B100E021"
+        "OwnerKey" = "8:_11821164ABEC4FBEACC5126EEA88468B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -187,6 +181,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -203,6 +213,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -261,26 +279,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E6A0627F37D4DAE8F40A7EEC77580DA"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\education_books_library_icon_149685.ico"
-            "TargetName" = "8:education_books_library_icon_149685.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_26EBA13D91444200A0F1AB3EC59112E0"
@@ -617,9 +615,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:Barış Karakulak"
         "ProductCode" = "8:{D1101879-288C-470F-8B37-3114F2A6EC4A}"
-        "PackageCode" = "8:{4954EF8E-5A0E-4E64-BF27-8ED01AC1B374}"
+        "PackageCode" = "8:{F59D9D43-63D8-43F0-AA17-BDB4A5EE96C5}"
         "UpgradeCode" = "8:{8A591E4E-F32F-4BC7-A67B-946B916A2F5F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -739,7 +737,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_135DAD44CCEB4DBEB5B15F3F19F52439"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1FB9A7E8B020408E8EF3C1DC1594F191"
             {
             "Name" = "8:Barış_Karakulak_192113059"
             "Arguments" = "8:"
@@ -747,27 +745,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_20E407F0F357442F8DB148C2B100E021"
-            "Folder" = "8:_36F904A04F59432C90389D076683AEA8"
-            "WorkingFolder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_655D1D7C7A7B4FB28914DB257203B673"
-            {
-            "Name" = "8:Barış_Karakulak_192113059"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_20E407F0F357442F8DB148C2B100E021"
+            "Target" = "8:_11821164ABEC4FBEACC5126EEA88468B"
             "Folder" = "8:_A92744ABB51A4C69BA5E27098DA35868"
             "WorkingFolder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E89312934BB7416FB8C239D25F1A872C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_62701E9DCA8E4919B07280E48904D969"
             {
             "Name" = "8:Barış_Karakulak_192113059"
             "Arguments" = "8:"
@@ -775,8 +759,22 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_20E407F0F357442F8DB148C2B100E021"
+            "Target" = "8:_11821164ABEC4FBEACC5126EEA88468B"
             "Folder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
+            "WorkingFolder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B91D6A031138490AA8492DDEDE1A0FB9"
+            {
+            "Name" = "8:Barış_Karakulak_192113059"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_11821164ABEC4FBEACC5126EEA88468B"
+            "Folder" = "8:_36F904A04F59432C90389D076683AEA8"
             "WorkingFolder" = "8:_8FCD2B56DBBA46E4B7CA6624874B1253"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -1180,7 +1178,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_20E407F0F357442F8DB148C2B100E021"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_11821164ABEC4FBEACC5126EEA88468B"
             {
             "SourcePath" = "8:..\\Barış_Karakulak_192113059\\obj\\x86\\Debug\\Barış_Karakulak_192113059.exe"
             "TargetName" = "8:"

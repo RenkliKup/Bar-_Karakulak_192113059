@@ -182,7 +182,7 @@ namespace Barış_Karakulak_192113059.oduncAl
                 if (response.Item1)
                 {
                     //messagebox yazdır
-                    MessageBox.Show("İade Edildi");
+                    MessageBox.Show("Süresi Uzatıldı");
                 }
                 //integer tipine ogr_id adında bir degisken olusturuyorum
                 //ogr_id degiskenine txt_id den gelen degeri atıyorum

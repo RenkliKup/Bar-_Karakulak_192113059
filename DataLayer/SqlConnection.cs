@@ -13,7 +13,7 @@ namespace DataLayer
             //Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\xxx.accdb;Persist Security Info=False;
 
            // OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Ace.OleDb.12.0;Data Source=|DataDirectory|\Database2.accdb");
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Database2.accdb;Persist Security Info=False;");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Ace.OleDb.12.0;Data Source=|DataDirectory|\Database2.accdb");
             //objeyi donduruyorum
             return conn;
         }
