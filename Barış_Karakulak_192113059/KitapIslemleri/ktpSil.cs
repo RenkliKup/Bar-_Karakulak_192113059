@@ -61,7 +61,7 @@ namespace Barış_Karakulak_192113059.KitapIslemleri
             if (response.Item1)
             {
                 //message göster
-                MessageBox.Show("İade Edildi");
+                MessageBox.Show("Silindi");
             }
             //grid_kitap_sil gridine getbooks fonksiyonunu atıyorum
             grid_kitap_sil.DataSource = bookContext.GetBooks();
